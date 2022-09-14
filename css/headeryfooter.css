@@ -1,5 +1,28 @@
-header{
-text-align: center;
-color: aqua;
+* {
+box-sizing: border-box;
+
+}
+body {
+    background-color: rgb(37, 37, 37);
+    }
+    
+    
+
+.navbar{
+background-color: rgba(122, 122, 122, .7);
+padding: 20px 10px;
+
+}
+
+.logo{
+height: 10%;
+width: 10%;
+float: left;
+}
+
+.lupita {
+    height: 10%;
+    width: 10%;
+    float: right;
 
 }
