@@ -1,0 +1,23 @@
+.peliculas { display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    height: 1800px;
+    padding: 15px;
+    background-color: rgba(192, 24, 24, 0.691);
+    justify-content: space-between;
+    align-items: center;}
+
+.item {    width: 200px;
+    margin: 15px;
+    padding: 15px;
+    box-sizing: 200px
+}
+
+h3{
+    text-align: center;
+}
+
+.imagen { 
+    height: 300px;
+    width: 200px;
+}
