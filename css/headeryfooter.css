@@ -27,15 +27,18 @@ header {
     border-radius: 40px;
     height: 80px;
     align-self: center;
+
 }
 
 .navegador {
     display: flex;
-    height: 100px;
-    justify-content: flex-start;
+    width: 100px;
+    justify-content: space-around;
+    list-style-type: none;
+
 }
 
-ul {
+li {
     margin:5%;
     padding: 0%;
     width:40%;
