@@ -30,6 +30,10 @@ body {
     list-style-type: none; 
     
     justify-content: space-around;
+<<<<<<< HEAD
+=======
+    list-style-type: none;
+>>>>>>> c6701018d82c91ef747b30af41247d03f05d87e7
 }
 
 li {
@@ -43,8 +47,11 @@ a {
     font-size: 16px;
     font-weight: bold;
     align-self: center;
+<<<<<<< HEAD
     text-decoration: none;
 
+=======
+>>>>>>> c6701018d82c91ef747b30af41247d03f05d87e7
 }
 
 
