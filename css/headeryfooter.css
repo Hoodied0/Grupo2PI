@@ -1,7 +1,3 @@
-* {
-    box-sizing:border-box
-}
-
 
 body {
     background-color: rgb(44, 43, 43);
@@ -25,10 +21,7 @@ body {
     display: flex;
     height: 100px;
     justify-content: space-around;
-<<<<<<< HEAD
     list-style-type: none; 
-=======
->>>>>>> d8d008c239949f489ab6715bdd1a4f813c5eaf25
 }
 
 li {
