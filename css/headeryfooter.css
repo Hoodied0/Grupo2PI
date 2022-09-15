@@ -1,48 +1,38 @@
-
-body {
-    background-color: rgb(44, 43, 43);
+*{
+    box-sizing: border-box;
 }
 
+
 .estructura {
-    width: 100%;
-    background-color: rgb(255, 174, 24);
-    height: 100px; 
-    padding: 20px 30px;
-    display: flex; 
+    background-color: rgb(39, 39, 39);
+    
 }
 
 .logo {
-    border-radius: 0px;
-    height: 80px;
-    align-self: center;
+    height: 90px;
 }
 
-.navegador {
+.navegador  {
     display: flex;
-    height: 100px;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+li { font-size: 12px;
     list-style-type: none; 
 }
 
-li {
-    margin:5px;
-    width:40px;
-    font-size: 11.5px;
-}
 a {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: bold;
     align-self: center;
     text-decoration: none;
-
 }
 
 
 form {
     display: flex;
-    align-self: flex-end;
-    height:30px;
-    align-items: center;
-    margin-left:34px;
 }
