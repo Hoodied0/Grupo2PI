@@ -5,18 +5,15 @@
 
 body {
     background-color: rgb(44, 43, 43);
-    margin: 5px;
-    width: 90%;
 }
 
 .estructura {
     width: 100%;
     background-color: rgb(255, 174, 24);
-    padding: 30px;
-    height: 100px;
-
+    height: 100px; 
+    padding: 20px 30px;
+    display: flex; 
 }
-
 
 .logo {
     border-radius: 0px;
@@ -27,15 +24,16 @@ body {
 .navegador {
     display: flex;
     height: 100px;
-    list-style-type: none; 
-    
     justify-content: space-around;
+<<<<<<< HEAD
+    list-style-type: none; 
+=======
+>>>>>>> d8d008c239949f489ab6715bdd1a4f813c5eaf25
 }
 
 li {
-    margin:5%;
-    padding: 0%;
-    width:40%;
+    margin:5px;
+    width:40px;
     font-size: 11.5px;
 }
 a {
