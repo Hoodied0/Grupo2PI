@@ -42,7 +42,7 @@ a {
 form {
     display: flex;
     align-self: flex-end;
-    height:30%;
+    height:30px;
     align-items: center;
     margin-left:34px;
 }
