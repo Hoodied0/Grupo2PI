@@ -7,9 +7,16 @@ body {
 }
 .sectionFondo{
     background-image: url("../img/FondoDetallesPeliculas.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+
     }
+.starwarslogo{
+    display: flex;
+    align-items: flex-end;
+    width: 70%;
+}
 
 .titulo{
     color: beige;
@@ -19,16 +26,25 @@ body {
     color: blanchedalmond;
     font-size: 18px;
 }
-.duracion{
+.reloj{
     color: aliceblue;
     font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+.duracion{
+  margin-right : 3%;
 }
 .calificacion{
    font-size: 17px;
    color: aliceblue;
    display: flex;
+   align-items: center; 
+   
 }
-
+.NameCalificacion{
+    margin-bottom: 10px;
+}
 
 h2 {
     color: white; 
@@ -45,7 +61,10 @@ h1{
     display: flex; 
     justify-content: space-around 
 }
-
+.tamaño{
+   width: 160px;
+   height: 200px;
+}
 .namepersonaje{
     color: rgb(128, 128, 128);
     font-size: 15 px;
@@ -54,7 +73,6 @@ h1{
 .director{
     display: flex;
     align-items: center;
-    
 }
 .biografia{
     color: aliceblue;
@@ -65,4 +83,6 @@ h1{
 .infor{
     color: aliceblue; 
     font-size: 15px;
+    display: flex;
+    align-items: center;
 }
