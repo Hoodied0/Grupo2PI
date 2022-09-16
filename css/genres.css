@@ -1,0 +1,53 @@
+ 
+ body{
+ background-color: brown;
+    margin: -16px 0px 0px 0px;
+    padding: 0;
+    min-width: 100vw;
+}
+
+.flexcontainer {
+display: flex;
+
+}
+
+.genrelist {
+flex: 1;
+border: 2px solid black
+
+}
+
+.titulo {
+text-align: center;
+
+
+}
+
+.pelilist{
+list-style: none;
+display: flex;
+flex-direction: column;
+
+}
+
+.miniimg {
+max-width: 250px;
+max-height: 250px;
+
+}
+
+.texto1{
+text-decoration: none;
+color:orange;
+justify-content: right;
+
+
+}
+
+.lista1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
