@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="css/headeryfooter.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
@@ -12,28 +12,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
-<header class="estructura"> 
-        
-    <ul class="navegador">
-        <li> <a href="./index.html"></a> <img class="logo" src="./img/logo-final.png"></li>
-        <li> <a class= "inicio" href="./index.html">Inicio</a> </li>
-        <li> <a class= "inicio" href="./detail-movie.html">Películas</a></li>
-        <li> <a class= "inicio" href="./detail-serie.html">SERIES</a></li>
-        <li> <a class= "inicio" href="./favorite.html">Favoritos</a></li>
-        <li> <a class= "inicio" href="./genres.html">Géneros</a></li>
-        <li class="Resultado"> 
-            <form action="index.html" method="GET"> 
-            <input type = "text" value="" name="name" placeholder="Buscador">
-            <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
-            </form>
-            <a href="./search-results.html"></a>
-        </li>
-     </ul>              
-    
-</header>
-
 <body>
+
+    <header class="estructura"> 
+        
+        <ul class="navegador">
+            <li class = "contenedorlogo"> 
+                <a href="./index.html">
+                    <img class="logo" src="./img/logo-final.png">
+                </a>
+            </li>
+            <li> <a class= "inicio" href="./index.html">INICIO</a> </li>
+            <li> <a class= "inicio" href="./detail-movie.html">PELICULAS</a></li>
+            <li> <a class= "inicio" href="./detail-serie.html">SERIES</a></li>
+            <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
+            <li> <a class= "inicio" href="./genres.html">GENEROS</a></li>
+            <li class="Resultado"> 
+                <form action="index.html" method="GET"> 
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
+                <input type = "text" value="" name="name" placeholder="Buscador"> 
+                </form>
+                <a href="./search-results.html"></a>
+            </li>
+         </ul>              
+        
+    </header>
 
     <section class = "presentacion">
         <a href="./detail-movie.html">
@@ -48,38 +51,48 @@
     <section class = "peliculasyseries">
 
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/Avengers.jpg" class="imagen" alt="Avengers">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/Avengers.jpg" class="imagen" alt="Avengers">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Avengers</a></h3>
         </article>
 
-        <a href="./detail-movie.html">
+       
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/TopGun.jpg" class="imagen" alt="Top Gun Maverick">
-        </a>
+            <div>
+                 <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/TopGun.jpg" class="imagen" alt="Top Gun Maverick">
+                 </a>
+           </div>
         <h3><a class = "nombres" href="./detail-movie.html">Top Gun Maverick</a></h3>
         </article>
 
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/Shrek.jpg" class="imagen" alt="Shrek">
-        </a>
+            <div>
+                 <a href="./detail-movie.html">
+                   <img src = "./img/Peliculas/Shrek.jpg" class="imagen" alt="Shrek">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Shrek</a></h3>
         </article>
         
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/JungleCruise.jpg" class="imagen" alt="Jungle Cruise">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/JungleCruise.jpg" class="imagen" alt="Jungle Cruise">
+                 </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Jungle Cruise</a></h3>
         </article>
      
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/NoTimeToDie.jpg" class="imagen" alt="No Time To Die">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/NoTimeToDie.jpg" class="imagen" alt="No Time To Die">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">No Time To Die</a></h3>
         </article>
       
@@ -90,37 +103,47 @@
     <section class = "peliculasyseries">
 
         <article class = "item">
-        <a href="./detail-serie.html">    
-            <img src = "./img/Series/BreakingBad.jpg" class="imagen"alt="Breking bad">
-        </a>
+            <div>
+                <a href="./detail-serie.html">    
+                    <img src = "./img/Series/BreakingBad.jpg" class="imagen"alt="Breking bad">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-serie.html">Breaking Bad</a></h3>
         </article>
 
         <article class = "item">
-        <a href="./detail-serie.html">  
-            <img src = "./img/Series/GOT.jpg" class="imagen" alt="Game of Thrones">
-        </a>
+            <div>
+                <a href="./detail-serie.html">  
+                    <img src = "./img/Series/GOT.jpg" class="imagen" alt="Game of Thrones">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-serie.html">Game of Thrones</a></h3>
         </article> 
 
         <article class = "item">
-        <a href="./detail-serie.html">  
-            <img src = "./img/Series/PeakyBlinders.jpg" class="imagen" alt="Peaky Blinders">
-        </a>
+            <div>
+                <a href="./detail-serie.html">  
+                    <img src = "./img/Series/PeakyBlinders.jpg" class="imagen" alt="Peaky Blinders">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-serie.html">Peaky Blinders</a></h3>
         </article> 
 
         <article class = "item">
-        <a href="./detail-serie.html">  
-            <img src = "./img/Series/PrisonBreak.jpg" class="imagen" alt="Prison Break">
-        </a>
+            <div>
+                <a href="./detail-serie.html">  
+                    <img src = "./img/Series/PrisonBreak.jpg" class="imagen" alt="Prison Break">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-serie.html">Prison Break</a></h3>
         </article> 
 
         <article class = "item">
-        <a href="./detail-serie.html">  
-            <img src = "./img/Series/StrangerThings.jpg" class="imagen" alt="Stranger Things">
-        </a>
+            <div>
+                <a href="./detail-serie.html">  
+                    <img src = "./img/Series/StrangerThings.jpg" class="imagen" alt="Stranger Things">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-serie.html">Stranger Things</a></h3>
         </article> 
     
@@ -132,50 +155,59 @@
 
         
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/Avatar.jpg" class="imagen"alt="Avatar">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/Avatar.jpg" class="imagen"alt="Avatar">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Avatar</a></h3>
         </article>
     
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/2012.jpg" class="imagen" alt="2012">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/2012.jpg" class="imagen" alt="2012">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">2012</a></h3>
         </article> 
     
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/StarWars.jpg" class="imagen" alt="Star Wars">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/StarWars.jpg" class="imagen" alt="Star Wars">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Star Wars</a></h3>
         </article> 
      
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/Joker.jpg" class="imagen" alt="Joker">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/Joker.jpg" class="imagen" alt="Joker">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Joker</a></h3>
         </article> 
   
         <article class = "item">
-        <a href="./detail-movie.html">
-            <img src = "./img/Peliculas/ToyStory4.jpg" class="imagen" alt="Toy Story 4">
-        </a>
+            <div>
+                <a href="./detail-movie.html">
+                    <img src = "./img/Peliculas/ToyStory4.jpg" class="imagen" alt="Toy Story 4">
+                </a>
+            </div>
         <h3><a class = "nombres" href="./detail-movie.html">Toy Story 4</a></h3>
         </article> 
    
     </section>  
     
-        <section> 
-            <article class="footer">
+
     <footer>
-        <h6>Los derechos de Flix se adjudican a los respectivos creadores. Comuniquese al 444-678-594 para mas ayuda.</h6>
-        <h6>Joaquin Huergo, Agustin Droullier y Mariana Guzman</h6>
+        <span>Los derechos de Flix se adjudican a los respectivos creadores.  ¿Preguntas? 0800 678 594 para mas ayuda.</span>
+        <span>Joaquin Huergo, Agustin Droullier y Mariana Guzman.</span>
     </footer>  
-            </article>
-        </section>
+
+       
 
 </body>
 </html>

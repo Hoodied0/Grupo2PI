@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,81 @@
     <title>genres</title>
     <link rel="stylesheet" href="css/headeryfooter.css">
     <link rel="stylesheet" href="css/genres.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
+<header class="estructura">
+
+    <ul class="navegador">
+        <li> <a href="./index.html"></a> <img class="logo" src="./img/logo.png"></li>
+        <li> <a class="inicio" href="./index.html">Inicio</a> </li>
+        <li> <a class="inicio" href="./detail-movie.html">Películas</a></li>
+        <li> <a class="inicio" href="./detail-serie.html">SERIES</a></li>
+        <li> <a class="inicio" href="./favorite.html">Favoritos</a></li>
+        <li> <a class="inicio" href="./genres.html">Géneros</a></li>
+        <li class="Resultado">
+            <form action="index.html" method="GET">
+                <input type="text" value="" name="name" placeholder="Buscador">
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass">
+                <a href="./search-results.html"></a></i></button>
+            </form>
+            <a href="./search-results.html"></a>
+        </li>
+    </ul>
+
+</header>
+
 <body>
+    <div class="flexcontainer">
+
+        <div class="genrelist pelicula">
+            <h1 class="titulo"> Peliculas </h1>
+            <ul class="pelilist">
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
+                    <a class="texto1" href="./genres-movie.html">Horror </a></li>
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/TopGun.jpg" alt="icono de topgun">
+                    <a class="texto1" href="./genres-movie.html">Comedia </a></li>
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
+                    <a class="texto1" href="./genres-movie.html">Drama</a> </li>
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
+                    <a class="texto1" href="./genres-movie.html">Romance </a></li>
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
+                    <a class="texto1" href="./genres-movie.html"></a> </li>
+                <li class="lista1">
+                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
+                    <a class="texto1" href="./genres-movie.html"></a> </li>
+                
+                
+
+                
+          
+
+
+
+
+            </ul>
+
+
+
+        </div>
+        <div class="genrelist serie">
+            <h1 class="titulo"> Series </h1>
 
     
+        </div>
+
+    </div>
+
+
+
 </body>
+
 </html>

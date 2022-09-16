@@ -4,12 +4,18 @@
 
 
 .estructura {
-    background-color: rgb(39, 39, 39);
-    
+    height: 8.75vh;
+    background-color: rgb(39, 39, 39); 
 }
 
 .logo {
     height: 55px;
+
+}
+
+.contenedorlogo a{display: flex;
+    align-items: center;
+    justify-content: center ;
 }
 
 .navegador  {
@@ -17,7 +23,8 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    border: solid wheat 2px;
+    border: solid wheat 1.5px;
+    padding: 5px 15px;
 }
 
 .inicio {
@@ -28,13 +35,25 @@
     align-self: center;
     text-decoration: none;
     list-style-type: none;
-    padding: 5px;
-    width: 50px;
-    height: 30px;
-    box-sizing: 50px;
-    border: solid rgb(255, 255, 255) 2px;
+
 }
 
 form {
     display: flex;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    margin:50px 0px 0px 0px;
+    padding: 50px;
+    font-family: 'Balthazar', serif;
+
+
+
 }
