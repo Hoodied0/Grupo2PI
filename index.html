@@ -7,18 +7,21 @@
     <title>home</title>
     <link rel="stylesheet" href="css/headeryfooter.css">
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <header class="estructura"> 
         
     <ul class="navegador">
-        <li> <a href="./index.html"></a> <img class="logo" src="./img/logo.png"></li>
-        <li> <a href="./index.html">Inicio</a> </li>
-        <li> <a href="./detail-movie.html">Películas</a></li>
-        <li> <a href="./detail-serie.html">Series</a></li>
-        <li> <a href="./favorite.html">Favoritos</a></li>
-        <li> <a href="./genres.html">Géneros</a></li>
+        <li> <a class= "inicio" href="./index.html"></a> <img class="logo" src="./img/logo.png"></li>
+        <li> <a class= "inicio" href="./index.html">Inicio</a> </li>
+        <li> <a class= "inicio" href="./detail-movie.html">Películas</a></li>
+        <li> <a class= "inicio" href="./detail-serie.html">Series</a></li>
+        <li> <a class= "inicio" href="./favorite.html">Favoritos</a></li>
+        <li> <a class= "inicio" href="./genres.html">Géneros</a></li>
         <li class="Resultado"> 
             <form action="index.html" method="GET"> 
             <input type = "text" value="" name="name" placeholder="Buscador">
@@ -31,37 +34,55 @@
 </header>
 
 <body>
-      
+
+    <section class = "presentacion">
+        <a href="./detail-movie.html">
+           <img src = "img/Presentacion Buzz.jpg" class = "imagenfondo" alt="buzz">
+        </a>
+        <h4><a class = "textointerno" href="./detail-movie.html">30 de Septiembre, solo en Flix</a></h4>
+        </a>
+    </section>
+
 <h2>Peliculas mas populares</h2>
 
     <section class = "peliculasyseries">
 
         <article class = "item">
+        <a href="./detail-movie.html">
             <img src = "./img/Peliculas/Avengers.jpg" class="imagen" alt="Avengers">
-            <h3>Avengers</h3>
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Avengers</a></h3>
         </article>
 
+        <a href="./detail-movie.html">
         <article class = "item">
+        <a href="./detail-movie.html">
             <img src = "./img/Peliculas/TopGun.jpg" class="imagen" alt="Top Gun Maverick">
-            <h3>Top Gun Maverick</h3>
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Top Gun Maverick</a></h3>
         </article>
 
         <article class = "item">
+        <a href="./detail-movie.html">
             <img src = "./img/Peliculas/Shrek.jpg" class="imagen" alt="Shrek">
-            <h3>Shrek</h3>
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Shrek</a></h3>
         </article>
-
+        
         <article class = "item">
+        <a href="./detail-movie.html">
             <img src = "./img/Peliculas/JungleCruise.jpg" class="imagen" alt="Jungle Cruise">
-            <h3>Jungle Cruise</h3>
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Jungle Cruise</a></h3>
         </article>
-
+     
         <article class = "item">
+        <a href="./detail-movie.html">
             <img src = "./img/Peliculas/NoTimeToDie.jpg" class="imagen" alt="No Time To Die">
-            <h3>No Time To Die</h3>
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">No Time To Die</a></h3>
         </article>
-
-
+      
     </section>
 
     <h2>Series mas populares</h2>
@@ -69,35 +90,84 @@
     <section class = "peliculasyseries">
 
         <article class = "item">
+        <a href="./detail-serie.html">    
             <img src = "./img/Series/BreakingBad.jpg" class="imagen"alt="Breking bad">
-            <h3>Breaking Bad</h3> 
+        </a>
+        <h3><a class = "nombres" href="./detail-serie.html">Breaking Bad</a></h3>
         </article>
 
         <article class = "item">
+        <a href="./detail-serie.html">  
             <img src = "./img/Series/GOT.jpg" class="imagen" alt="Game of Thrones">
-            <h3>Game of Thrones</h3> 
+        </a>
+        <h3><a class = "nombres" href="./detail-serie.html">Game of Thrones</a></h3>
         </article> 
-        
+
         <article class = "item">
+        <a href="./detail-serie.html">  
             <img src = "./img/Series/PeakyBlinders.jpg" class="imagen" alt="Peaky Blinders">
-            <h3>Peaky Blinders</h3> 
+        </a>
+        <h3><a class = "nombres" href="./detail-serie.html">Peaky Blinders</a></h3>
         </article> 
 
         <article class = "item">
+        <a href="./detail-serie.html">  
             <img src = "./img/Series/PrisonBreak.jpg" class="imagen" alt="Prison Break">
-            <h3>Prison Break</h3> 
+        </a>
+        <h3><a class = "nombres" href="./detail-serie.html">Prison Break</a></h3>
         </article> 
 
         <article class = "item">
+        <a href="./detail-serie.html">  
             <img src = "./img/Series/StrangerThings.jpg" class="imagen" alt="Stranger Things">
-            <h3>Stranger Things</h3> 
+        </a>
+        <h3><a class = "nombres" href="./detail-serie.html">Stranger Things</a></h3>
         </article> 
     
     </section>  
+
+    <h2>Peliculas mas vistas</h2>
+
+    <section class = "peliculasyseries">
+
+        
+        <article class = "item">
+        <a href="./detail-movie.html">
+            <img src = "./img/Peliculas/Avatar.jpg" class="imagen"alt="Avatar">
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Avatar</a></h3>
+        </article>
     
-
-
-
+        <article class = "item">
+        <a href="./detail-movie.html">
+            <img src = "./img/Peliculas/2012.jpg" class="imagen" alt="2012">
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">2012</a></h3>
+        </article> 
+    
+        <article class = "item">
+        <a href="./detail-movie.html">
+            <img src = "./img/Peliculas/StarWars.jpg" class="imagen" alt="Star Wars">
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Star Wars</a></h3>
+        </article> 
+     
+        <article class = "item">
+        <a href="./detail-movie.html">
+            <img src = "./img/Peliculas/Joker.jpg" class="imagen" alt="Joker">
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Joker</a></h3>
+        </article> 
+  
+        <article class = "item">
+        <a href="./detail-movie.html">
+            <img src = "./img/Peliculas/ToyStory4.jpg" class="imagen" alt="Toy Story 4">
+        </a>
+        <h3><a class = "nombres" href="./detail-movie.html">Toy Story 4</a></h3>
+        </article> 
+   
+    </section>  
+    
         <section> 
             <article class="footer">
     <footer>
