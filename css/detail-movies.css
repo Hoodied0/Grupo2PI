@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+}
+.imgfondo{ 
+    
+}
+.titulo{
+    color: beige;
+    font-size: 35px;
+}
+.sinopsis {
+    color: blanchedalmond;
+    font-size: 18px;
+}
+.duracion{
+    color: aliceblue;
+    font-size: 17px;
+}
+.calificacion{
+   font-size: 17px;
+   color: aliceblue;
+   display: flex;
+}
+h2 {
+    color: white; 
+    font-family: 'Rajdhani', sans-serif; 
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 10px;
+}
+h1{
+    font-size: 25px;
+    color: aliceblue;
+}
+.reparto{
+    display: flex; 
+    justify-content: space-around;
+}
+
+.namepersonaje{
+    color: rgb(128, 128, 128);
+    font-size: 15 px;
+}
+
+img{ 
+
+}
