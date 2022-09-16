@@ -4,20 +4,27 @@
 
 
 .estructura {
-    height: 12.5vh;
+    height: 8.75vh;
     background-color: rgb(39, 39, 39); 
 }
 
 .logo {
     height: 55px;
+
+}
+
+.contenedorlogo a{display: flex;
+    align-items: center;
+    justify-content: center ;
 }
 
 .navegador  {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    border: solid wheat 2px;
+    border: solid wheat 1.5px;
+    padding: 5px 15px;
 }
 
 .inicio {
@@ -31,7 +38,6 @@
     padding: 5px;
     width: 50px;
     height: 50px;
-
     border: solid rgb(255, 255, 255) 2px;
 }
 
