@@ -11,6 +11,30 @@
   </head>
 <body>
 
+  <header class="estructura"> 
+        
+    <ul class="navegador">
+        <li class = "contenedorlogo"> 
+            <a href="./index.html">
+                <img class="logo" src="./img/logo-final.png">
+            </a>
+        </li>
+        <li> <a class= "inicio" href="./index.html">INICIO</a> </li>
+        <li> <a class= "inicio" href="./detail-movie.html">PELICULAS</a></li>
+        <li> <a class= "inicio" href="./detail-serie.html">SERIES</a></li>
+        <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
+        <li> <a class= "inicio" href="./genres.html">GENEROS</a></li>
+        <li class="Resultado"> 
+            <form action="index.html" method="GET"> 
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
+            <input type = "text" value="" name="name" placeholder="Buscador"> 
+            </form>
+            <a href="./search-results.html"></a>
+        </li>
+     </ul>              
+    
+</header>
+
     <section class="sectionFondo">
     <!-- <img class="fondo" src="./img/FondoDetallesPeliculas.jpg" alt="StarWars"> -->
       <img class="starwarslogo" src="./img/actores/logoamarillo.png" alt="Logo de la pelicula">
@@ -24,7 +48,7 @@
 
  <article class="reloj">
     <h3 class="duracion"> Duración 142 min. </h3>
-    <img src="./img/Reloj.png" alt="Reloj" width="40px">
+    <img src="./img/Reloj.png" alt="Reloj" width="60px">
   </article>
 <article class="calificacion">
   <h3 class="NameCalificacion"> Calificación </h3>
@@ -90,10 +114,9 @@
       </article>
   
   </section>
-  <br> 
-  <br> 
-  <br>
-    <section class="Sdirector"> 
+
+  <h1>Director</h1>
+  <section class="Sdirector"> 
 
       <article class="padredirector">
         
@@ -102,7 +125,6 @@
       
 
       <div class="cosas">
-        <h2 class="biografia">Director</h2>
         <h2>J.J. Abrams</h2>
         <p class="biografia">  Jeffrey Jacob Abrams, más conocido como J. J. Abrams, es un director, productor, guionista, actor y compositor de cine y televisión estadounidense. Es propietario de la productora de cine Bad Robot Productions</p>
         <h3 class="biografia">Nacimiento: 27 de junio de 1966 (edad 56 años)</h3>
@@ -111,6 +133,13 @@
     </article>
 
     </section>
+
+    <footer>
+      <span>Copias del contenido audiovisual se encuentra prohibido por la ley número 695 del codigo penal Argentino.</span>
+      <span>Todos los derechos de Flix se le adjudican a sus respectivos creadores.</span>
+      <span>¿Preguntas? Llama al 0800 678 594 marcando 0 para ayuda.</span>
+      <span>Joaquin Huergo, Agustin Droullier y Mariana Guzman.</span>
+  </footer>  
 
 </body>
 </html>
