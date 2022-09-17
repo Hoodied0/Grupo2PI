@@ -1,12 +1,16 @@
 *{
     box-sizing: border-box;
+
 }
 
 body{
-    background-color: brown;
     margin: -16px 0px 0px 0px;
     padding: 0;
     min-width: 100vw;
+    background-image: url(../img/background\ naranja.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .peliculasyseries{
@@ -16,24 +20,21 @@ body{
     justify-content: space-around;
     width: 100vw;
     height: 350px;
-    border: solid green 3px;
     
 }
 
 .item {
     height: 300px;
     width: 14%;
-    border: solid green 3px;
 }
 .item div{
     width: 100%;
 }
 h2{
-    margin: 0px 0px;
-    padding: 50px 0px 15px 10px;
+    margin: 0;
+    padding: 50px 0px 20px 10px;
     font-family: 'Balthazar', serif;
     font-size: 35px;
-    border: solid green 3px;
 }
 
 h3{
@@ -46,7 +47,6 @@ h3{
     color: black;
     text-decoration: none;
     font-size: 30px;  
-    border: solid green 3px;
 }
 
 .imagen {
@@ -55,7 +55,7 @@ h3{
     box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
 }
 
-.imagenfondo {
+.imagenfondo {box-shadow: 0px 15px 15px 1px rgba(0,0,0,0.65);
     width: 100vw;
 }
 
