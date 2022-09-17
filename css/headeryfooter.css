@@ -5,7 +5,7 @@
 
 .estructura {
     height: 8.75vh;
-    background-color: rgb(39, 39, 39); 
+    background-color:rgb(25, 31, 40);
 }
 
 .logo {
@@ -23,8 +23,9 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    border: solid rgb(199, 95, 30) 1.5px;
+    border: solid rgb(255, 255, 255) 2px;
     padding: 5px 15px;
+
 }
 
 .inicio {
@@ -49,12 +50,9 @@ footer{
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgb(39, 39, 39);
-    margin:50px 0px 0px 0px;
+    background-color: rgb(25, 31, 40, 0.9);
+    margin: 100px 0px 0px 0px;
     padding: 50px;
     font-family: 'Balthazar', serif;
-    border: solid rgb(199, 95, 30) 1.5px;
-
-
-
+    font-size: 16px;
 }

@@ -14,56 +14,142 @@
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
-<header class="estructura">
-
+<header class="estructura"> 
+        
     <ul class="navegador">
-        <li> <a href="./index.html"></a> <img class="logo" src="./img/logo.png"></li>
-        <li> <a class="inicio" href="./index.html">Inicio</a> </li>
-        <li> <a class="inicio" href="./detail-movie.html">Películas</a></li>
-        <li> <a class="inicio" href="./detail-serie.html">SERIES</a></li>
-        <li> <a class="inicio" href="./favorite.html">Favoritos</a></li>
-        <li> <a class="inicio" href="./genres.html">Géneros</a></li>
-        <li class="Resultado">
-            <form action="index.html" method="GET">
-                <input type="text" value="" name="name" placeholder="Buscador">
-                <button type="submit"> <i class="fa-solid fa-magnifying-glass">
-                <a href="./search-results.html"></a></i></button>
+        <li class = "contenedorlogo"> 
+            <a href="./index.html">
+                <img class="logo" src="./img/logo-final.png">
+            </a>
+        </li>
+        <li> <a class= "inicio" href="./index.html">INICIO</a> </li>
+        <li> <a class= "inicio" href="./detail-movie.html">PELICULAS</a></li>
+        <li> <a class= "inicio" href="./detail-serie.html">SERIES</a></li>
+        <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
+        <li> <a class= "inicio" href="./genres.html">GENEROS</a></li>
+        <li class="Resultado"> 
+            <form action="index.html" method="GET"> 
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
+            <input type = "text" value="" name="name" placeholder="Buscador"> 
             </form>
             <a href="./search-results.html"></a>
         </li>
-    </ul>
-
+     </ul>              
+    
 </header>
 
 <body>
     <div class="flexcontainer">
 
         <div class="genrelist pelicula">
-            <h1 class="titulo"> Peliculas </h1>
+            <h1 class="titulo">Peliculas</h1>
             <ul class="pelilist">
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
-                    <a class="texto1" href="./genres-movie.html">Horror </a></li>
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconohorror.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Horror </a>
+                </li>
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/TopGun.jpg" alt="icono de topgun">
-                    <a class="texto1" href="./genres-movie.html">Comedia </a></li>
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconoaction.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Acción </a>
+                </li>
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
-                    <a class="texto1" href="./genres-movie.html">Drama</a> </li>
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconocomedy.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Comedia </a>
+                </li>
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
-                    <a class="texto1" href="./genres-movie.html">Romance </a></li>
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconodrama.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Drama </a>
+                </li>
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
-                    <a class="texto1" href="./genres-movie.html"></a> </li>
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconofantasy.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Fantasía</a>
+                </li>
                 <li class="lista1">
-                    <img class="miniimg" src="./img/Peliculas/screamicon.jpeg" alt="icono de scream">
-                    <a class="texto1" href="./genres-movie.html"></a> </li>
-                
-                
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconoscifi.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Sci-Fi </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconolove.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Romance </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconocrime.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Crimen </a>
+                </li>
 
-                
-          
+
+
+
+
+
+
+
+
+
+
+            </ul>
+
+123
+
+        </div>
+        <div class="genrelist serie">
+            <h1 class="titulo">Series</h1>
+            <ul class="pelilist">
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconohorror.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Horror </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconoaction.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Acción </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconocomedy.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Comedia </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconodrama.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Drama </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconofantasy.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Fantasía</a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconoscifi.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Sci-Fi </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconolove.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Romance </a>
+                </li>
+                <li class="lista1">
+                    <a href="./genres-movie.html"><img class="miniimg" src="./img/Peliculas/iconocrime.png"
+                            alt="icono de scream"></a>
+                    <a class="texto1" href="./genres-movie.html">Crimen </a>
+                </li>
+
+
+
+
+
+
+
 
 
 
@@ -71,17 +157,16 @@
             </ul>
 
 
-
-        </div>
-        <div class="genrelist serie">
-            <h1 class="titulo"> Series </h1>
-
-    
         </div>
 
     </div>
 
+    <footer>
+        <span>Los derechos de Flix se adjudican a los respectivos creadores.  ¿Preguntas? 0800 678 594 para mas ayuda.</span>
+        <span>Joaquin Huergo, Agustin Droullier y Mariana Guzman.</span>
+    </footer>  
 
+       
 
 </body>
 

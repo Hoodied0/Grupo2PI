@@ -27,19 +27,26 @@ text-align: center;
 list-style: none;
 display: flex;
 flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0;
+padding: 0;
 
 }
 
 .miniimg {
 max-width: 250px;
 max-height: 250px;
+border: 5px solid black;
 
 }
 
 .texto1{
 text-decoration: none;
-color:orange;
+color:black;
 justify-content: right;
+font-family: 'Bebas Neue', cursive;
+font-size: 25px
 
 
 }
