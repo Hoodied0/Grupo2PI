@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/Estrellas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    min-width: 100vw;
+    margin: -16px 0px 0px 0px;
+
+}
+.sectionFondo{
+    display: flex;
+    background-image: url("../img/FondoDetallesSeries.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:700px;
+    box-shadow: 0px 15px 15px 1px rgba(0,0,0,0.65);
+
+    }
+.starwarslogo{
+    align-self: flex-end;
+    width: 400px;
+    margin: -20px;
+    
+}
+
+.titulo{
+    color: beige;
+    font-size: 40px;
+    padding: 0px 0px 0px 20px;
+}
+.sinopsis {
+    color: blanchedalmond;
+    font-size: 18px;
+    padding: 0px 0px 0px 20px;
+}
+.reloj{
+    color: aliceblue;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+.duracion{
+  margin-right : 3%;
+  padding: 0px 0px 0px 20px;
+}
+.calificacion{
+   font-size: 17px;
+   color: aliceblue;
+   display: flex;
+   align-items: center;
+   padding: 0px 0px 0px 20px; 
+   
+}
+.NameCalificacion{
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white; 
+    font-family: 'Rajdhani', sans-serif; 
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: -18px;
+    margin-left:15px ;
+}
+.namepersonaje{
+    color: rgb(128, 128, 128);
+    font-size: 15 px;
+    margin-left: 16%;
+    border: rgb(122, 119, 111);
+    margin-bottom: 9%;
+}
+
+h1{
+    font-size: 25px;
+    color: aliceblue;
+    padding: 0px 0px 0px 20px;
+}
+.reparto{
+    display: flex; 
+    justify-content: space-around 
+}
+.tamaño{
+   width: 166px;
+   height: 220px;
+   border-radius:9%;
+}
+.padredirector{
+    display: flex;
+}
+.fotodirector{
+    margin: 1%;
+
+}
+.cosas{
+    align-items: center;
+}
+.biografia{
+    color: aliceblue;
+    font-size: 15px;
+    padding: 15px;
+    align-items: center;
+}
+.infor{
+    color: aliceblue; 
+    font-size: 15px;
+    align-items: center;
+    align-items: center;
+}
