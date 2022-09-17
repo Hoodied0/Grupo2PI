@@ -10,18 +10,19 @@ body {
     background-image: url("../img/FondoDetallesPeliculas.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 600px;
 
     }
 .starwarslogo{
     align-self: flex-end;
-    width: 150px;
+    width: 260px;
     
 }
 
 .titulo{
     color: beige;
-    font-size: 35px;
+    font-size: 40px;
+   
 }
 .sinopsis {
     color: blanchedalmond;
@@ -50,10 +51,18 @@ body {
 h2 {
     color: white; 
     font-family: 'Rajdhani', sans-serif; 
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
-    margin-left: 10px;
+    margin-bottom: -18px;
 }
+.namepersonaje{
+    color: rgb(128, 128, 128);
+    font-size: 15 px;
+    margin-left: 16%;
+    border: rgb(122, 119, 111);
+    margin-bottom: 9%;
+}
+
 h1{
     font-size: 25px;
     color: aliceblue;
@@ -63,27 +72,28 @@ h1{
     justify-content: space-around 
 }
 .tamaño{
-   width: 160px;
-   height: 200px;
+   width: 166px;
+   height: 220px;
+   border-radius:9%;
 }
-.namepersonaje{
-    color: rgb(128, 128, 128);
-    font-size: 15 px;
-}
-
-.director{
+.padredirector{
     display: flex;
+}
+.fotodirector{
+
+}
+.cosas{
     align-items: center;
 }
 .biografia{
     color: aliceblue;
     font-size: 15px;
-    display: inline-block; 
     padding: 15px;
+    align-items: center;
 }
 .infor{
     color: aliceblue; 
     font-size: 15px;
-    display: flex;
+    align-items: center;
     align-items: center;
 }
