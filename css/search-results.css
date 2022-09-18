@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: -16px 0px 0px 0px;
+    padding: 0;
+    min-width: 100vw;
+    background-image: url(../img/background\ naranja.jpg);
+    background-repeat: no-repeat;
+    background-position: 50px 0px 0px 0px;
+    background-size: cover;
+    
+}
+
+.peliculasyseries{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    width: 100vw;
+    height: 350px;
+    
+}
+
+.item {
+    height: 300px;
+    width: 14%;
+}
+.item div{
+    width: 100%;
+}
+
+h2{
+    margin: 0;
+    padding: 50px 0px 25px 10px;
+    font-family: 'Balthazar', serif;
+    font-size: 35px;
+}
+
+h3{
+    text-align:center;
+    margin: 0;
+}
+
+.nombres {
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;  
+}
+
+.imagen {
+    width: 100%;
+    height:300px;
+    box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
+}
+
+.imagenfondo {box-shadow: 0px 15px 15px 1px rgba(0,0,0,0.65);
+    width: 100vw;
+}
+
+@media (max-width: 1024px) {} 
+@media (max-width: 650px) {} 
