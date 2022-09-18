@@ -63,6 +63,27 @@ body {
 .NameCalificacion{
     margin-bottom: 10px;
 }
+.Favorito{
+
+    color: aliceblue;
+    font-size: 17px;
+    display: flex;
+    align-items: center; 
+    margin-top: -4%;
+    margin-bottom: 3%;
+}
+.Namefavorito{
+    margin-bottom: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.Estreno{
+    color: white; 
+    font-family: 'Rajdhani', sans-serif; 
+    font-size: 18px;
+   margin-top: -2%;
+   margin-left: 2%;
+}
 
 h2 {
     color: white; 
