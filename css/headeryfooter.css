@@ -5,7 +5,7 @@
 
 .estructura {
     height: 8.75vh;
-    background-color:rgb(25, 31, 40);
+    background-color:rgb(30, 39, 53);
 }
 
 .logo {
@@ -42,7 +42,6 @@
 form {
     display: flex;
 }
-
 footer{
     display: flex;
     flex-direction: column;
