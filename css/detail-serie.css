@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../img/Estrellas.jpg);
+    background-image: url(../img/21.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -24,18 +24,21 @@ body {
     align-self: flex-end;
     width: 400px;
     margin: -20px;
-    
 }
 
 .titulo{
     color: beige;
-    font-size: 40px;
+    font-size: 60px;
     padding: 0px 0px 0px 20px;
+    font-family: 'Bebas Neue', "cursive"; 
+   margin-top: -0%;
+   margin-bottom: -2%;
 }
 .sinopsis {
     color: blanchedalmond;
     font-size: 18px;
-    padding: 0px 0px 0px 20px;
+    padding: 3px 0px 0px 20px;
+    font-family: 'Rubik', sans-serif; 
 }
 .reloj{
     color: aliceblue;
@@ -46,6 +49,7 @@ body {
 .duracion{
   margin-right : 3%;
   padding: 0px 0px 0px 20px;
+  font-family: 'Rubik', sans-serif;
 }
 .calificacion{
    font-size: 17px;
@@ -53,6 +57,9 @@ body {
    display: flex;
    align-items: center;
    padding: 0px 0px 0px 20px; 
+   margin-bottom: -2%;
+   margin-top: -3%;
+   font-family: 'Rubik', sans-serif;
    
 }
 .NameCalificacion{
@@ -66,35 +73,40 @@ h2 {
     font-style: italic;
     margin-bottom: -18px;
     margin-left:15px ;
-}
-.namepersonaje{
-    color: rgb(128, 128, 128);
-    font-size: 15 px;
-    margin-left: 16%;
-    border: rgb(122, 119, 111);
-    margin-bottom: 9%;
+    font-family: 'Rubik', sans-serif;
 }
 
 h1{
     font-size: 25px;
     color: aliceblue;
     padding: 0px 0px 0px 20px;
+    font-family: 'Rubik', sans-serif;
 }
 .reparto{
     display: flex; 
     justify-content: space-around 
 }
 .tamaño{
-   width: 166px;
-   height: 220px;
+   width: 175px;
    border-radius:9%;
+   box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
 }
-.padredirector{
+.namepersonaje{
+    color: rgb(80, 79, 79);
+    font-size: 15px;
+    margin-left: 16%;
+    border: rgb(158, 158, 158);
+    margin-bottom: 9%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.director{
     display: flex;
 }
 .fotodirector{
-    margin: 1%;
-
+    width: 180px;
+    height: 196px; 
+    border-radius: 7%;
 }
 .cosas{
     align-items: center;
@@ -104,10 +116,23 @@ h1{
     font-size: 15px;
     padding: 15px;
     align-items: center;
+    font-family: 'Rubik', sans-serif;
 }
-.infor{
-    color: aliceblue; 
-    font-size: 15px;
-    align-items: center;
-    align-items: center;
+.sugerenciasFlix{
+    color: aliceblue;
+    font-size: 25px;
+    margin-bottom: 4%;
+    font-family: 'Rubik', sans-serif;
 }
+.Sugerencias1{
+    display: flex;
+    justify-content: space-around
+}
+
+.cartelera{
+    width: 260px;
+    height: 160px;
+    border-radius:5%;
+}
+@media (max-width: 1024px) {} 
+@media (max-width: 650px) {} 
