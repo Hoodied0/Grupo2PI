@@ -77,8 +77,8 @@ body {
     font-size: 17px;
     display: flex;
     align-items: center; 
-    margin-top: -4%;
-    margin-bottom: 3%;
+    margin-top: -5%;
+    margin-bottom: 1%;
 }
 .Namefavorito{
     margin-bottom: 2%;
@@ -89,7 +89,7 @@ body {
     color: white; 
     font-family: 'Rajdhani', sans-serif; 
     font-size: 18px;
-    margin-top: -2%;
+    margin-top: 0%;
     margin-left: 2%;
 }
 h2 {
@@ -107,6 +107,11 @@ h1{
     color: aliceblue;
     padding: 0px 0px 0px 20px;
     font-family: 'Rubik', sans-serif;
+}
+.Video{
+    margin-left: 38%;
+    margin-top: -20%;
+    
 }
 .reparto{
     display: flex; 

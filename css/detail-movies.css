@@ -93,13 +93,25 @@ h2 {
     margin-left:15px ;
     font-family: 'Rubik', sans-serif;
 }
+
+.estilotrai{
+    color: aliceblue;
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    
+}
+.Video{
+    margin-left: 38%;
+    margin-top: -24%;
+    
+}
 .namepersonaje{
     color: rgb(134, 134, 134);
     font-size: 15px;
     margin-left: 16%;
     border: rgb(160, 160, 160);
     margin-bottom: 9%;
-    font-family: 'Rubik', sans-serif;font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
 
 h1{
