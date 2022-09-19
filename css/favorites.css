@@ -11,3 +11,16 @@ body{
     background-size: cover;
     background-image: url(../img/background\ naranja.jpg)
 }
+.favorite{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fav{
+   justify-content: space-around;
+}
+.tamaño{
+    width: 260px;
+    height: 160px;
+    border-radius:5%;
+}
