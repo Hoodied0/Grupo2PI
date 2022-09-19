@@ -30,8 +30,10 @@ body{
     color: black;
     font-size: 50px;
     align-items: center;
+    font-family: 'Lato', sans-serif;
  }
  h3{
     color: black;
     font-size: 35px;
+    font-family: 'Lato', sans-serif;
  }
