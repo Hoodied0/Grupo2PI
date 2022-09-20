@@ -14,10 +14,13 @@ body{
 .favorite{
     display: flex;
     justify-content: space-around;
+    margin-top: 5%;
 }
+
 
 .fav{
    justify-content: space-around;
+
 }
 .tamaño{
     width: 260px;
@@ -26,14 +29,20 @@ body{
 
 }
  h2{
-    display: flex;
-    color: black;
-    font-size: 50px;
-    align-items: center;
-    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -283%);
+    font-family: 'Bebas Neue', cursive;
+    color:rgb(0, 0, 0);
+    font-size: 65px;
+  
+   
  }
  h3{
     color: black;
     font-size: 35px;
     font-family: 'Lato', sans-serif;
+    margin-top: 7%;
+    margin-bottom: -3%;
  }
