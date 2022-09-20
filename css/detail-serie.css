@@ -113,6 +113,7 @@ h1{
 .reparto{
     display: flex; 
     justify-content: space-around 
+
 }
 .tamaño{
    width: 175px;
@@ -164,7 +165,7 @@ h1{
 
 @media (max-width: 1024px) {
     .sectionFondo{
-        width: 3900px;
+        width: 1900px;
     }
 
 } 
