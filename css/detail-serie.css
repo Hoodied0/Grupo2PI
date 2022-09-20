@@ -113,13 +113,17 @@ h1{
 .reparto{
     display: flex; 
     justify-content: space-around 
-
+   
+}
+.item1{
+    flex-wrap: wrap;
 }
 .tamaño{
    width: 175px;
    border-radius:9%;
    box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
 }
+
 .namepersonaje{
     color: rgb(80, 79, 79);
     font-size: 15px;
@@ -151,10 +155,12 @@ h1{
     font-size: 25px;
     margin-bottom: 4%;
     font-family: 'Rubik', sans-serif;
+    
 }
 .Sugerencias1{
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    flex-wrap: wrap; 
 }
 
 .cartelera{
@@ -164,20 +170,40 @@ h1{
 }
 
 @media (max-width: 1024px) {
-    .sectionFondo{
-        width: 1900px;
+    .duracion{
+ font-size: 13px;}
+
+ .Etrailer{
+    margin-top: -29%;
+    margin-left: 19%;
+ }
+ .item1{
+    justify-content: space-between;
+ }
+ .reparto{
+    flex-wrap: wrap;
+}
+
+
     }
 
-} 
+
 @media (max-width: 650px) {
-    .sectionFondo{
-        width: 1000px;
-    }
-    .textointerno{
-        font-size: 30px;
-        margin-left: -24%;
-    }
+    .Etrailer{
+        margin-top: -29%;
+        margin-left: 19%;
+         }
+        
     .INFORMACION1{
         font-size: 40PX;
     }
+    .reparto{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    .tamaño{
+        
+    }
+
 } 

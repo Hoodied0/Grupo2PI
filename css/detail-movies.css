@@ -120,7 +120,7 @@ h1{
 }
 
 .tamaño{
-   width: 166px;
+max-width: 166px;
    height: 220px;
    border-radius:9%;
 }
