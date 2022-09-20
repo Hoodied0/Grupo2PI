@@ -4,13 +4,11 @@
 
 body{
     margin: -16px 0px 0px 0px;
-    padding: 0;
-    min-width: 100vw;
     background-repeat: no-repeat;
     background-position: 50px 0px 0px 0px;
     background-size: cover;
     background-image: url("../img/30.jpg");
-    flex-wrap: wrap;
+    
 }
 .favorite{
     display: flex;
@@ -27,8 +25,8 @@ body{
 }
 
 .tamaño{
-    width: 23vw;
-    height: 13vw;
+    width: 270px;
+    height: 170px;
     border-radius:5%;
     flex-wrap: wrap;
 
@@ -36,23 +34,18 @@ body{
 .tamañoE{
     display: flex;
     flex-direction: column;
-    width: 18vw;
-
 
 }
  h2{
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -283%);
+  text-align: center;
     font-family: 'Bebas Neue', cursive;
     color:rgb(134, 134, 134);
-    font-size: 4vw;
+    font-size: 65px;
     flex-wrap: wrap;
 }
  h3{
     color: rgb(175, 175, 175);
-    font-size: 3vw;
+    font-size: 35px;
     font-family: 'Lato', sans-serif;
     margin-top: 7%;
     margin-bottom: -3%;
@@ -65,9 +58,11 @@ body{
 }
 .estructura{
     flex-direction: column;
+    height:120px;
+    display: flex;
 }
 h2{
-    font-size: 4vw;
+    font-size: 25px;
 } 
 }
 @media (max-width: 650px) {
