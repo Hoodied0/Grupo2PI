@@ -49,57 +49,54 @@ body {
 }
 .reloj{
     color: aliceblue;
-    font-size: 17px;
+    font-size: 18px;
     display: flex;
     align-items: center;
 }
 .duracion{
-  margin-right : 3%;
   padding: 0px 0px 0px 20px;
   font-family: 'Rubik', sans-serif;
 }
 .calificacion{
-   font-size: 17px;
-   color: aliceblue;
-   display: flex;
-   align-items: center;
-   padding: 0px 0px 0px 20px; 
-   margin-bottom: -2%;
-   font-family: 'Rubik', sans-serif;
-   margin-top: -4%;
+    font-size: 18px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 0px 20px; 
+    font-family: 'Rubik', sans-serif;
+    margin-top: -3%;
 }
+
 .NameCalificacion{
     margin-bottom: 10px;
 }
 .Favorito{
-
     color: aliceblue;
-    font-size: 17px;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     align-items: center; 
-    margin-top: -5%;
-    margin-bottom: 1%;
+    margin-top: -4%;
 }
 .Namefavorito{
     margin-bottom: 2%;
     margin-right: 2%;
     margin-left: 2%;
 }
+
 .Estreno{
-    color: white; 
-    font-family: 'Rajdhani', sans-serif; 
+    color:aliceblue; 
     font-size: 18px;
-    margin-top: 0%;
-    margin-left: 2%;
+    font-family: 'Rubik', sans-serif; 
+    margin-left: 20px;
 }
 h2 {
-    color: white; 
-    font-family: 'Rajdhani', sans-serif; 
+    color: white;  
     font-size: 18px;
     font-style: italic;
-    margin-bottom: -18px;
-    margin-left:15px ;
+    margin-bottom: -15px;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 h1{
@@ -125,10 +122,9 @@ h1{
 .namepersonaje{
     color: rgb(80, 79, 79);
     font-size: 15px;
-    margin-left: 16%;
     border: rgb(158, 158, 158);
-    margin-bottom: 9%;
     font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
 .director{
