@@ -6,6 +6,7 @@
 .estructura {
     height: 8.75vh;
     background-color:rgb(30, 39, 53);
+    
 }
 
 .logo {
@@ -55,3 +56,21 @@ footer{
     font-family: 'Balthazar', serif;
     font-size: 16px;
 }
+@media (max-width:1024px) {
+
+    .estructura {
+        flex-direction: column;
+        height:120px;
+    }
+    
+} 
+@media (max-width:650px) {
+
+    .estructura {
+        flex-direction: column;
+        height:120px;
+    }
+    .inicio {
+        font-size: 14px;
+    }
+} 
