@@ -2,10 +2,9 @@
     box-sizing: border-box;
 }
 
-
-
 .estructura {
-    height: 8.75vh;
+    height: 8.75%;
+
     background-color:rgb(30, 39, 53);
     
 }
@@ -15,7 +14,8 @@
 
 }
 
-.contenedorlogo a{display: flex;
+.contenedorlogo a{
+    display: flex;
     align-items: center;
     justify-content: center ;
 }
@@ -27,7 +27,6 @@
     list-style-type: none;
     border: solid rgb(255, 255, 255) 2px;
     padding: 5px 15px;
-
 }
 
 .inicio {
@@ -44,6 +43,7 @@
 form {
     display: flex;
 }
+
 footer{
     display: flex;
     flex-direction: column;
@@ -57,21 +57,53 @@ footer{
     font-family: 'Balthazar', serif;
     font-size: 16px;
 }
+
 @media (max-width:1024px) {
 
     .estructura {
-        flex-direction: column;
-        height:120px;
+        height:6.25%;
     }
-    
-} 
-@media (max-width:650px) {
 
-    .estructura {
-        flex-direction: column;
-        height:120px;
+    .navegador  {
+        border: solid rgb(255, 255, 255) 1,5px;
+        padding: 5px 10px;
+    }
+    .logo {
+        height: 30px;
     }
     .inicio {
         font-size: 14px;
     }
-} 
+
+    footer{
+        margin: 50px 0px 0px 0px;
+        padding: 25px;
+        font-size: 12.5px;    
+    }        
+}
+
+@media (max-width:650px) {
+
+    .estructura {
+        height:5%;
+    }
+
+    .navegador  {
+        border: solid rgb(255, 255, 255) 1px;
+        padding: 5px 5px;
+    }
+
+    .logo {
+        height: 20px;
+    }
+    .inicio {
+        font-size: 8px;
+    }
+
+    footer{
+        margin: 30px 0px 0px 0px;
+        padding: 10px;
+        font-size: 8px;    
+    }  
+
+}
