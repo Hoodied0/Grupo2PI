@@ -11,28 +11,15 @@ body {
     margin: -16px 0px 0px 0px;
 
 }
-.sectionFondo{
+.presentacion{
     display: flex;
-    background-image: url("../img/FondoDetallesSeries.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height:700px;
-    box-shadow: 0px 15px 15px 1px rgba(0,0,0,0.65);
+}
 
-    }
-.starwarslogo{
-    align-self: flex-end;
-    width: 400px;
-    margin: -20px;
-}
-.textointerno{
-    color: black;
-    font-size: 50px;
-    font-family: 'Rajdhani', sans-serif;
-}
-.textointernoflex {
-   margin-left: 38%;
-}
+.imagenfondo {box-shadow: 0px 15px 15px 1px rgba(0,0,0,0.65);
+    margin: -16px 0px 0px 0px;
+    width: 100vw;
+} 
+
 .titulo{
     color: beige;
     font-size: 60px;
@@ -184,7 +171,6 @@ h1{
     flex-wrap: wrap;
 }
 
-
     }
 
 
@@ -203,7 +189,11 @@ h1{
     
     }
     .tamaño{
-        
+
     }
+    .Video{
+        width: 300px;
+        height: 25git0px;
+     }
 
 } 
