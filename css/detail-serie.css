@@ -25,8 +25,8 @@ body {
     font-size: 60px;
     padding: 0px 0px 0px 20px;
     font-family: 'Bebas Neue', "cursive"; 
-   margin-top: -0%;
-   margin-bottom: -2%;
+    margin-top: -0%;
+    margin-bottom: -2%;
 }
 .sinopsis {
     color: blanchedalmond;
@@ -93,9 +93,7 @@ h1{
     font-family: 'Rubik', sans-serif;
 }
 .Video{
-    margin-left: 38%;
-    margin-top: -20%;
-    
+  
 }
 .reparto{
     display: flex; 
@@ -170,8 +168,7 @@ h1{
  .reparto{
     flex-wrap: wrap;
 }
-
-    }
+ }
 
 
 @media (max-width: 650px) {
@@ -187,9 +184,6 @@ h1{
         display: flex;
         flex-wrap: wrap;
     
-    }
-    .tamaño{
-
     }
     .Video{
         width: 300px;
