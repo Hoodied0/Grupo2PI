@@ -20,15 +20,15 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
 .then(function(data){
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'movie'){
-        movies += `<article class="articulo">
+        movies += `<section class="caja1">
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
-    <h2 class="titulocategorias"> ${data.results[i].title} </h2>
-    </article>`
+    <h2 class="tituloresultados"> ${data.results[i].title} </h2>
+    </section>`
 } else {
-    series += `<article class="articulo">
+    series += `<section class="caja1">
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-    <h2 class="titulocategorias"> ${data.results[i].original_name} </h2>
-    </article>`
+    <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
+    </section>`
     console.log(data)
 }}
     container.innerHTML = movies
