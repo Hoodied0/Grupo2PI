@@ -35,11 +35,11 @@ function AbrirCerrarPeliculas(estadoboton1, evento){
 
               `<article class="item">
                <div>
-                <a href="./detail-movie.html">
+                <a href="./detail-movie.html?id=${data.results[i].id}">
                     <img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}" class="imagen" alt='${data.results[i].title}'>
                 </a>
                </div>
-               <h3><a class = "nombres" href="./detail-movie.html">${data.results[i].title}</a></h3>
+               <h3><a class = "nombres" href="./detail-movie.html?id=${data.results[i].id}">${data.results[i].title}</a></h3>
                </article>`
              }
              lista.innerHTML = peliculaspop
@@ -102,11 +102,11 @@ function AbrirCerrarSeries(estadoboton2, evento){
 
               `<article class="item">
                <div>
-                <a href="./detail-serie.html">
+                <a href="./detail-serie.html?id=${data.results[i].id}">
                     <img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}" class="imagen" alt='${data.results[i].original_name}'>
                 </a>
                </div>
-               <h3><a class = "nombres" href="./detail-serie.html">${data.results[i].original_name}</a></h3>
+               <h3><a class = "nombres" href="./detail-serie.html?id=${data.results[i].id}">${data.results[i].original_name}</a></h3>
                </article>`
              }
              lista.innerHTML = seriespop
@@ -168,11 +168,11 @@ function AbrirCerrarPremiadas(estadoboton3, evento){
     
              `<article class="item">
                 <div>
-                <a href="./detail-pelis.html">
+                <a href="./detail-movie.html?id=${data.results[i].id}">
                     <img src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}" class="imagen" alt='${data.results[i].title}'>
                 </a>
                 </div>
-                <h3><a class = "nombres" href="./detail-pelis.html">${data.results[i].title}</a></h3>
+                <h3><a class = "nombres" href="./detail-pelis.html?id=${data.results[i].id}">${data.results[i].title}</a></h3>
               </article>`
             }
             lista.innerHTML = peliculaspremiadas
