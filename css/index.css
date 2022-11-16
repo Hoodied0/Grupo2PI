@@ -22,13 +22,15 @@ body{
 }
 
 .item {
-    width: 14%;
+    width: 18%;
 }
+
 .item div{
     width: 100%;
 }
 
 h2{
+    cursor: pointer;
     margin: 0;
     padding: 50px 0px 25px 10px;
     font-family: 'Balthazar', serif;
