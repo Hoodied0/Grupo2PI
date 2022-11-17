@@ -7,7 +7,7 @@ body{
     margin: -16px 0px 0px 0px;
     padding: 0;
     min-width: 100vw;
-    background-image: url(../img/background\ naranja.jpg);
+    background-color: rgba(240, 156, 0, 0.842);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -34,9 +34,10 @@ body{
 }
 
 .tituloresultados{
-    text-decoration: none; 
     font-size: 25px;
     color: black;
+    text-decoration: none;
+
 
 }
 .Titulo-busqueda{
@@ -44,6 +45,7 @@ body{
     margin: 0;
     padding: 50px 0px 25px 10px;
     font-family: 'Balthazar', serif;
+    text-decoration: none;
 }
 
 .imagen {
@@ -51,9 +53,10 @@ body{
     height: 320px;
     box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
 }
-.caja1{
- background-color: rgba(248, 186, 94, 0.26);
+a{
+    text-decoration: none;
 }
+
 @media (max-width: 1024px) {
 
     h2{ 
