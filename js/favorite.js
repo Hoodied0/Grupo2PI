@@ -1,18 +1,18 @@
-let container = document.querySelector('.favs-container');
-let listContainer = document.querySelector('.list-container')
+let container = document.querySelector('.favorite-series');
+let listContainer = document.querySelector('.favorite-movie')
 
 window.addEventListener('load', function(){
     let favs = getFavsStorage()
     if(favs.length == 0){
         container.innerHTML = `
-        <li>
-            <h4>No tienes favoritos</h4>
-        </li>
+        <section>
+            <h4 class="no-fav">No tienes favoritos</h4>
+        </section>
         `
     } else {
         listContainer.innerHTML += `
         <h2>
-            Tienes ${favs.length} favoritos
+            Tienes ${favs.length} Tus favoritos
         </h2>
         ` 
         getAllFavsAndPrint(favs)
