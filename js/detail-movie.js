@@ -21,10 +21,13 @@ let estreno = document.querySelector(".Estreno")
 let presentacion = document.querySelector(".presentacion")
 let generos = document.querySelector('#generos')
 
+   
+
+
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       `<a  href="./detail-genres.html?id=${data.genres[i].id}">${data.genres[i].name} </a>`
+       `<a  href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
      
     }
 
@@ -35,17 +38,13 @@ sinopsis.innerText += data.overview;
 duracion.innerHTML += 'Duracion: ' + data.runtime + ' minutos';
 estreno.innerText = 'Fecha de estreno: ' + data.release_date
 
-imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagen" alt=${data.original_title}>`
+imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagenpelicula" alt=${data.original_title}>`
 
-presentacion.innerHTML = imagen
-}
-)
+presentacion.innerHTML += imagen
+})
 .catch(function(error) {
     console.log("Error: " + error);
 })
-
-
-
 
 let url2 = "https://api.themoviedb.org/3/movie/" + id + "/watch/providers?api_key=282ba42024158eda7c391efcdc7bbf53"
 console.log(url2)
@@ -68,7 +67,7 @@ for (let i = 0; i < data.results.US.buy.length; i++){
       <div>
            <img src="https://image.tmdb.org/t/p/w500${data.results.US.buy[i].logo_path}" class="imagen" alt='${data.results.US.buy[i].provider_name}'>
       </div>
-      <h3>${data.results.US.buy[i].provider_name}</h3>
+      <h3 class = "nombres">${data.results.US.buy[i].provider_name}</h3>
       </article>`
     }
     Listasitios.innerHTML = links
@@ -77,3 +76,67 @@ for (let i = 0; i < data.results.US.buy.length; i++){
 .catch(function(error) {
     console.log("Error: " + error);
 })
+
+
+
+
+let container = document.querySelector('.button1')
+
+fetch(url)
+.then(function(response){
+return response.json()
+}
+)
+.then(function(data){
+
+let favoritos = getStorage() 
+let estaMiProducto = favoritos.includes(data.id) 
+
+let textoInicial = ' '
+if(estaMiProducto){
+    textoInicial = 'Sacar de favoritos'
+} else {
+    textoInicial = 'Agregar a Favoritos'
+}
+container.innerHTML = `<button class='favoritos'>${textoInicial}</button>`
+
+let btnFavs = document.querySelector('.favoritos')
+
+btnFavs.addEventListener('click', function(e){
+    console.log(e)        
+    let favoritos = getStorage()
+    let estaMiProducto = favoritos.includes(data.id)
+
+    if(estaMiProducto){
+        removeFavorite(data.id, favoritos)
+        e.target.innerText='Agregar a Favoritos'
+    } else {
+        addFavorite(data.id, favoritos)
+        e.target.innerText='Sacar a Favoritos'
+    }
+
+}) 
+
+})
+
+function getStorage(){
+    let storage = localStorage.getItem('favoritos')
+    if(storage !== null && storage !== undefined){
+        return JSON.parse(storage)
+    } else {
+        return []
+    }
+}
+
+function addFavorite(id, storage){
+    storage.push(id)
+    let storageToString = JSON.stringify(storage)
+    localStorage.setItem('favoritos', storageToString)
+}
+
+function removeFavorite(id, storage){
+    let position = storage.indexOf(id)
+    storage.splice(position, 1)
+    let storageToString = JSON.stringify(storage)
+    localStorage.setItem('favoritos', storageToString)
+}
