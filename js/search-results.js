@@ -3,23 +3,6 @@ let apiKey = "ba0b591fbb4dcbf21e7a279fceca5d5e"
 
 //VALIDANDO FORMULARIO 
 
-window.addEventListener("load",function(){
-    let input = document.querySelector(".input")
-    let form = document.querySelector(".formulario")
-
-    form.addEventListener("click",function(evento){
-        formValidation(form,input);
-    });
-        
-    form.addEventListener("keydown",function(evento){
-        formValidation(form,input);
-    });
-    
-    input.addEventListener("click",function(evento){
-        document.querySelector(".error").innerText =  " ";
-    })
-
-})
 
 function formValidation(form,input){
     form.addEventListener("submit",function(e){
@@ -34,7 +17,20 @@ function formValidation(form,input){
 }
 
  window.addEventListener('load',function(){
+let input = document.querySelector(".input")
+let form = document.querySelector(".formulario")
 
+    form.addEventListener("click",function(evento){
+        formValidation(form,input);
+    });
+        
+    form.addEventListener("keydown",function(evento){
+        formValidation(form,input);
+    });
+    
+   input.addEventListener("click",function(evento){
+        document.querySelector(".error").innerText =  " ";
+    })
 let container = document.querySelector(".BusquedaPeliculas")
 let movies = ' '
 let movie =location.search
@@ -49,6 +45,10 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     return resp.json()
 })
 .then(function(data){
+    if (data.results [i]< 0)
+    
+    <h2 class= "no results"> No se encontraron resultados</h2>
+
     for (i=0; i< 5;i++){
         if (data.results[i].media_type === 'movie'){
         movies += `<section class="caja1">
