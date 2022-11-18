@@ -57,7 +57,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
             </a> 
         </section>` 
     } else {
-        series += `<section class="serie">
+        series += `<section class="serie ">
          <a href= "./detail-serie.html">
         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
         <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
@@ -71,10 +71,9 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         
     }
     else{
-        console.log("No se encontraron resultados")
+        console.log (hola)  
     }
    
-
 })
 
 
