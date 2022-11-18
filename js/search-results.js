@@ -9,7 +9,7 @@ function formValidation(form,input){
         e.preventDefault()
         if (input.value.length<4 && input.value.length>0){ 
         } else if (input.value.length === 0 || input.value.length === undefined ){
-            document.querySelector(".error").innerText =  "Tu buscador no tiene ningun caracter";
+           alert("Tu buscador no tiene ningun caracter")
         }else{
             this.submit()
         }
@@ -44,31 +44,36 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
 .then(function(resp){
     return resp.json()
 })
+
+
 .then(function(data){
-    if (data.results [i]< 0)
+    if (data.results.length>0){
+        for (i=0; i< 5;i++){
+            if (data.results[i].media_type === 'movie'){
+            movies += `<section class="caja1">
+            <a href="./detail-movie.html">
+             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+             <h2 class="tituloresultados"> ${data.results[i].title} </h2>
+            </a> 
+        </section>` 
+    } else {
+        series += `<section class="serie ">
+         <a href= "./detail-serie.html">
+        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
+        <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
+         </a>
+        </section>`
+        console.log(data)
     
-    <h2 class= "no results"> No se encontraron resultados</h2>
-
-    for (i=0; i< 5;i++){
-        if (data.results[i].media_type === 'movie'){
-        movies += `<section class="caja1">
-        <a href="./detail-movie.html">
-         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
-         <h2 class="tituloresultados"> ${data.results[i].title} </h2>
-        </a> 
-    </section>` 
-} else {
-    series += `<section class="serie">
-     <a href= "./detail-serie.html">
-    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-    <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
-     </a>
-    </section>`
-    console.log(data)
-
-}}
-    container.innerHTML = movies
-    container2.innerHTML = series
+    }}
+        container.innerHTML = movies
+        container2.innerHTML = series
+        
+    }
+    else{
+        console.log (hola)  
+    }
+   
 })
 
 
