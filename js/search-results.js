@@ -50,15 +50,17 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     if (data.results.length>0){
         for (i=0; i< 5;i++){
             if (data.results[i].media_type === 'movie'){
-            movies += `<section class="caja1">
-            <a href="./detail-movie.html">
+            movies += 
+            `<section class="caja1">
+            <a href="./detail-movie.html?id=${data.results[i].id}">
              <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
              <h2 class="tituloresultados"> ${data.results[i].title} </h2>
             </a> 
         </section>` 
     } else {
-        series += `<section class="serie ">
-         <a href= "./detail-serie.html">
+        series += 
+        `<section class="serie">
+         <a href= "./detail-serie.html?id=${data.results[i].id}">
         <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
         <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
          </a>
@@ -71,7 +73,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         
     }
     else{
-        console.log (hola)  
+        console.log ("no ")  
     }
    
 })
