@@ -24,7 +24,7 @@ let generos = document.querySelector('#generos')
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       `<a  href="./detail-genres.html?id=${data.genres[i].id}">${data.genres[i].name} </a>`
+       `<a  href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
      
     }
 
@@ -35,9 +35,9 @@ sinopsis.innerText += data.overview;
 duracion.innerHTML += 'Duracion: ' + data.runtime + ' minutos';
 estreno.innerText = 'Fecha de estreno: ' + data.release_date
 
-imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagen" alt=${data.original_title}>`
+imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagenpelicula" alt=${data.original_title}>`
 
-presentacion.innerHTML = imagen
+presentacion.innerHTML += imagen
 }
 )
 .catch(function(error) {
@@ -68,7 +68,7 @@ for (let i = 0; i < data.results.US.buy.length; i++){
       <div>
            <img src="https://image.tmdb.org/t/p/w500${data.results.US.buy[i].logo_path}" class="imagen" alt='${data.results.US.buy[i].provider_name}'>
       </div>
-      <h3>${data.results.US.buy[i].provider_name}</h3>
+      <h3 class = "nombres">${data.results.US.buy[i].provider_name}</h3>
       </article>`
     }
     Listasitios.innerHTML = links
