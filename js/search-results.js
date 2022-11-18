@@ -24,16 +24,14 @@ window.addEventListener("load",function(){
 function formValidation(form,input){
     form.addEventListener("submit",function(e){
         e.preventDefault()
-        if (input.value.length<4 && input.value.length>0){
-            document.querySelector(".error").innerText =  "Tu busqueda debe de tener un minimo de letras";
+        if (input.value.length<4 && input.value.length>0){ 
         } else if (input.value.length === 0 || input.value.length === undefined ){
-            document.querySelector(".error").innerText =  "No se encontraron resultados de busqueda";
+            document.querySelector(".error").innerText =  "Tu buscador no tiene ningun caracter";
         }else{
             this.submit()
         }
     })
 }
-
 
  window.addEventListener('load',function(){
 
@@ -67,12 +65,11 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
      </a>
     </section>`
     console.log(data)
+
 }}
     container.innerHTML = movies
     container2.innerHTML = series
 })
-
-
 
 
 .then(function(error){
