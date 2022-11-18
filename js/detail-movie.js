@@ -13,7 +13,7 @@ return response.json()
 )
 .then(function(data){
 console.log(data)
-
+let Listageneros=""
 let titulo = document.querySelector(".titulo")
 let sinopsis = document.querySelector(".sinopsis")
 let duracion = document.querySelector(".duracion")
@@ -24,7 +24,7 @@ let generos = document.querySelector('#generos')
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       '<a href="./detail-genres.html?id=${data.genres[i].id}">${data.genres[i].name}</a>'
+       `<a  href="./detail-genres.html?id=${data.genres[i].id}">${data.genres[i].name}</a> `
      
     }
 
@@ -35,7 +35,7 @@ sinopsis.innerText += data.overview;
 duracion.innerHTML += 'Duracion: ' + data.runtime + ' minutos';
 estreno.innerText = 'Fecha de estreno: ' + data.release_date
 
-imagen = '<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagen" alt=${data.original_title}>'
+imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagen" alt=${data.original_title}>`
 
 presentacion.innerHTML = imagen
 }
@@ -47,7 +47,7 @@ presentacion.innerHTML = imagen
 
 
 
-let url2 = "ttps://api.themoviedb.org/3/movie/" + id + "watch/providers?api_key=282ba42024158eda7c391efcdc7bbf53"
+let url2 = "https://api.themoviedb.org/3/movie/" + id + "/watch/providers?api_key=282ba42024158eda7c391efcdc7bbf53"
 console.log(url2)
 
 fetch(url2)
@@ -59,16 +59,16 @@ return response.json()
 console.log(data)
 
 let Listasitios = document.querySelector(".Sitios")
+let links=[]
 
-for (let i = 0; i < data.results.ES.buy.length; i++){
+for (let i = 0; i < data.results.US.buy.length; i++){
     links += 
 
      `<article class="item">
-       <h3>${data.results.ES.link}</h3>
       <div>
-           <img src="https://image.tmdb.org/t/p/w500${data.results.ES.buy[i].logo_path}" class="imagen" alt='${data.results.ES.buy[i].provider_name}'>
+           <img src="https://image.tmdb.org/t/p/w500${data.results.US.buy[i].logo_path}" class="imagen" alt='${data.results.US.buy[i].provider_name}'>
       </div>
-      <h3>${data.results.ES.buy[i].provider_name}</h3>
+      <h3>${data.results.US.buy[i].provider_name}</h3>
       </article>`
     }
     Listasitios.innerHTML = links
