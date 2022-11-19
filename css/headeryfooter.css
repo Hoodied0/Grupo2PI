@@ -4,7 +4,7 @@
 
 .estructura {
     height: 8.75%;
-    background-color:rgba(30, 39, 53, 0.95);
+    background-color:rgba(7, 8, 8, 0.699);
     
 }
 
@@ -50,7 +50,7 @@ footer{
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgb(25, 31, 40, 0.9);
+    background-color:rgba(7, 8, 8, 0.781);
     margin: 100px 0px 0px 0px;
     padding: 50px;
     font-family: 'Balthazar', serif;
