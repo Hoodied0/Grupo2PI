@@ -13,7 +13,6 @@ body {
 
 .presentacion{
     display: flex;
-    flex-direction: row-reverse;
 }
 
 .titulo{
@@ -130,6 +129,7 @@ body {
     width: 28vw;
     box-shadow: -15px -15px 15px 1px rgba(0,0,0,0.65);
     margin: 10px 0px 0px 25px;
+    display: block;
 }
 
 .subtitulos{
