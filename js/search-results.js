@@ -1,10 +1,22 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-//AQUI ESTOY VALIDANDO FORMULARIO 
+//VALIDANDO FORMULARIO 
 
-window.addEventListener("load",function(){
-    let input = document.querySelector(".input")
-    let form = document.querySelector(".formulario")
+function formValidation(form,input){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        if (input.value.length<4 && input.value.length>0){ 
+        } else if (input.value.length === 0 || input.value.length === undefined ){
+           alert("Tu buscador no tiene ningun caracter")
+        }else{
+            this.submit()
+        }
+    })
+}
+
+ window.addEventListener('load',function(){
+let input = document.querySelector(".input")
+let form = document.querySelector(".formulario")
 
     form.addEventListener("click",function(evento){
         formValidation(form,input);
@@ -58,21 +70,20 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         console.log("ENTRO",data.results[i].media_type, data.results[i].media_type=="movie")
         movies += 
         `<article class="articulo">
-            <a href="./detail-movie.html?id=${data.results[i].id}"> 
+           <a href="./detail-movie.html?id=${data.results[i].id}">
             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
             </a>
             <p class="titulocategorias"> ${data.results[i].title} </p>
-            
+         
         </article>`
         container.innerHTML = movies
 }   else {
     console.log("ENTRO SERIE")
     series += `<article class="articulo">
-    <a href="./detail-movie.html?id=${data.results[i].id}"> 
+    <a href= "./detail-serie.html?id=${data.results[i].id}">
     <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
     </a>
     <p class="titulocategorias"> ${data.results[i].name} </p>
-
     </article>`
     container.innerHTML = series
 
