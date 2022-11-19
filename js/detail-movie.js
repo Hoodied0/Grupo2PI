@@ -18,7 +18,7 @@ let titulo = document.querySelector(".titulo")
 let sinopsis = document.querySelector(".sinopsis")
 let duracion = document.querySelector(".duracion")
 let estreno = document.querySelector(".Estreno")
-let presentacion = document.querySelector(".presentacion")
+let lugarimagen = document.querySelector(".lugarimagen")
 let generos = document.querySelector('#generos')
 
    
@@ -40,7 +40,7 @@ estreno.innerText = 'Fecha de estreno: ' + data.release_date
 
 imagen = `<img src="https://image.tmdb.org/t/p/w500${data.poster_path}" class="imagenpelicula" alt=${data.original_title}>`
 
-presentacion.innerHTML += imagen
+lugarimagen.innerHTML = imagen
 })
 .catch(function(error) {
     console.log("Error: " + error);
