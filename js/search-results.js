@@ -1,24 +1,10 @@
-
-let apiKey = "ba0b591fbb4dcbf21e7a279fceca5d5e"
+let apiKey = "399cd9827f714613d04693cee425808c"
 
 //VALIDANDO FORMULARIO 
 
-
-function formValidation(form,input){
-    form.addEventListener("submit",function(e){
-        e.preventDefault()
-        if (input.value.length<4 && input.value.length>0){ 
-        } else if (input.value.length === 0 || input.value.length === undefined ){
-           alert("Tu buscador no tiene ningun caracter")
-        }else{
-            this.submit()
-        }
-    })
-}
-
- window.addEventListener('load',function(){
-let input = document.querySelector(".input")
-let form = document.querySelector(".formulario")
+window.addEventListener("load",function(){
+    let input = document.querySelector(".input")
+    let form = document.querySelector(".formulario")
 
     form.addEventListener("click",function(evento){
         formValidation(form,input);
@@ -28,58 +14,70 @@ let form = document.querySelector(".formulario")
         formValidation(form,input);
     });
     
-   input.addEventListener("click",function(evento){
+    input.addEventListener("click",function(evento){
         document.querySelector(".error").innerText =  " ";
     })
-let container = document.querySelector(".BusquedaPeliculas")
-let movies = ' '
+
+})
+
+function formValidation(form,input){
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        if (input.value.length<3 && input.value.length>0){
+            alert("Por favor, escribe mas de 3 caracteres")
+        } else if (input.value.length === 0 || input.value.length === undefined ){
+            alert("Tu buscador no tiene ningun caracter")
+        }else{
+            this.submit()
+        }
+    })
+}
+
+//window.addEventListener('load',function(){
+
+let container = document.querySelector(".busqueda")
+let tituloBusqueda=document.querySelector(".titulobusqueda")
 let movie =location.search
+let movies = " "
 console.log(location)
 let objMovie = new URLSearchParams(movie)
 let keyword = objMovie.get('name')
 let series = ' '
-let container2 = document.querySelector(".BusquedaSeries")
+let container2 = document.querySelector(".section_ser")
+
+tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
 
 fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
 .then(function(resp){
     return resp.json()
 })
-
-
 .then(function(data){
-    if (data.results.length>0){
-        for (i=0; i< 5;i++){
-            if (data.results[i].media_type === 'movie'){
-            movies += 
-            `<section class="caja1">
-            <a href="./detail-movie.html?id=${data.results[i].id}">
-             <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
-             <h2 class="tituloresultados"> ${data.results[i].title} </h2>
-            </a> 
-        </section>` 
-    } else {
-        series += 
-        `<section class="serie">
-         <a href= "./detail-serie.html?id=${data.results[i].id}">
-        <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].original_name}' />
-        <h2 class="tituloresultados"> ${data.results[i].original_name} </h2>
-         </a>
-        </section>`
+    for (i=0; i< 5;i++){
+        if (data.results[i].media_type == 'movie'){
         console.log(data)
-    
-    }}
+        console.log("ENTRO",data.results[i].media_type, data.results[i].media_type=="movie")
+        movies += 
+        `<article class="articulo">
+            <a href="./detail-movie.html?id=${data.results[i].id}"> 
+            <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].title}' />
+            </a>
+            <p class="titulocategorias"> ${data.results[i].title} </p>
+            
+        </article>`
         container.innerHTML = movies
-        container2.innerHTML = series
-        
-    }
-    else{
-       
-    }
-   
+}   else {
+    console.log("ENTRO SERIE")
+    series += `<article class="articulo">
+    <a href="./detail-movie.html?id=${data.results[i].id}"> 
+    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
+    </a>
+    <p class="titulocategorias"> ${data.results[i].name} </p>
+
+    </article>`
+    container.innerHTML = series
+
+}}
 })
-
-
-.then(function(error){
+.catch(function(error){
     console.log(error)
-})
 })
