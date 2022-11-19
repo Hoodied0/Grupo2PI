@@ -5,6 +5,10 @@
 .estructura {
     height: 8.75%;
     background-color:rgba(7, 8, 8, 0.699);
+    background-color:rgba(30, 39, 53, 0.97);
+    position:sticky;
+    top: 0;
+    width: 100%;
     
 }
 
