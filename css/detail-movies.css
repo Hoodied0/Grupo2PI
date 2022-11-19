@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image:url(../img/17564656_SL_042620_30310_19.jpg);
+    background-image:url(../img/Especifica\ VERTICALjpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 0;
@@ -136,9 +136,9 @@ body {
     font-size:18px ;
 }
 
-.subtitulos2{
-    font-size:18px;
-    margin-left: 7vw;
+.button1{
+    margin-left: 9.25vw;
+    margin-top: 10px;
 }
 
 @media (max-width: 1024px) {

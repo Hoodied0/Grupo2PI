@@ -7,9 +7,8 @@ let apiKey = "ba0b591fbb4dcbf21e7a279fceca5d5e"
 function formValidation(form,input){
     form.addEventListener("submit",function(e){
         e.preventDefault()
-        if (input.value.length<4 && input.value.length>0){ 
-        } else if (input.value.length === 0 || input.value.length === undefined ){
-           alert("Tu buscador no tiene ningun caracter")
+        if (input.value.length === 0 || input.value.length === undefined){
+           alert("¡Tu buscador no tiene ningun caracter!")
         }else{
             this.submit()
         }
