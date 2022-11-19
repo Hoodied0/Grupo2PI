@@ -140,3 +140,72 @@ function removeFavorite(id, storage){
     let storageToString = JSON.stringify(storage)
     localStorage.setItem('favoritos', storageToString)
 }
+
+
+
+let url3 = "https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US&page=1"
+console.log(url3)
+
+let boton = document.querySelector('.sugerenciasFlix')
+localStorage.removeItem('estadorecomendaciones');
+let estadorecomendaciones = localStorage.getItem('estadorecomendaciones')
+    
+    if(estadorecomendaciones === null || estadorecomendaciones === undefined){
+            localStorage.setItem('estadorecomendaciones', 'cerrado')
+            boton.innerText='Ver recomendaciones'}
+    else {
+            if(estadorecomendaciones === 'abierto'){
+                boton.innerText = 'Ocultar recomendaciones'}
+            else {
+                boton.innerText = 'Ver recomendaciones'
+            }
+        }
+        
+    function AbrirCerrarRecomendaciones(estadorecomendaciones, evento){
+            if(estadorecomendaciones === 'cerrado'){
+                 evento.target.innerText = 'Ocultar recomendaciones'
+                 localStorage.setItem('estadorecomendaciones', 'abierto')
+                 let lista = document.querySelector('.Sugerencias1')
+                 let ListaRecomendaciones = []
+    
+                 fetch(url3) 
+                 .then(function(response) {
+                 return response.json()
+                 })
+                 .then(function(data) {
+                 console.log(data);
+                 for (let i = 0; i < 12 ; i++){
+                  ListaRecomendaciones += 
+    
+                  `<article class="sugerencias">
+                    <a href="./detail-movie.html?id=${data.results[i].id}">
+                        <img class="cartelera" src="https://image.tmdb.org/t/p/w500${data.results[i].poster_path}" class="imagen" alt='${data.results[i].title}'>
+                    </a>
+                   </article>`
+                 }
+                 lista.innerHTML = ListaRecomendaciones
+                 })
+                 .catch(function(error) {
+                 console.log("Error: " + error);
+                 }
+                 )
+                 }
+    
+            else {
+                     evento.target.innerText = 'Ver recomendaciones'
+                     localStorage.setItem('estadorecomendaciones', 'cerrado')
+                     let ListaRecomendaciones = []
+                     let lista = document.querySelector('.Sugerencias1')
+                     lista.innerHTML = ListaRecomendaciones
+    
+                }
+    }
+    
+    boton.addEventListener('click', function (evento){
+            let storage = localStorage.getItem('estadorecomendaciones')
+            AbrirCerrarRecomendaciones(storage, evento)
+        })
+    
+
+
+    
