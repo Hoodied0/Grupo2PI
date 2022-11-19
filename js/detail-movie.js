@@ -112,7 +112,7 @@ btnFavs.addEventListener('click', function(e){
         e.target.innerText='Agregar a Favoritos'
     } else {
         addFavorite(data.id, favoritos)
-        e.target.innerText='Sacar a Favoritos'
+        e.target.innerText='Sacar de Favoritos'
     }
 
 }) 
