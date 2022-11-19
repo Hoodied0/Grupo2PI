@@ -73,7 +73,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
         
     }
     else{
-        console.log ("no ")  
+       
     }
    
 })
