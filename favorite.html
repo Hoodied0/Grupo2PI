@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,59 +9,62 @@
     <link rel="stylesheet" href="css/headeryfooter.css">
     <link rel="stylesheet" href="css/favorites.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <header class="estructura"> 
-        
-    <ul class="navegador">
-        <li class = "contenedorlogo"> 
-            <a href="./index.html">
-                <img class="logo" src="./img/logo-final.png">
-            </a>
-        </li>
-        <li> <a class= "inicio" href="./index.html">INICIO</a> </li>
-        <li> <a class= "inicio" >PELICULAS</a></li>
-        <li> <a class= "inicio" >SERIES</a></li>
-        <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
-        <li class="Resultado"> 
-            <form action="./search-results.html" method="GET"> 
-            <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
-            <input type = "text" value="" name="name" placeholder="Buscador"> 
-            </form>
-        </li>
-     </ul>              
-    
-</header>
+    <header class="estructura">
 
-    <h2>Mis favoritos  </h2>
+        <ul class="navegador">
+            <li class="contenedorlogo">
+                <a href="./index.html">
+                    <img class="logo" src="./img/logo-final.png">
+                </a>
+            </li>
+            <li> <a class="inicio" href="./index.html">INICIO</a> </li>
+            <li> <a class="inicio">PELICULAS</a></li>
+            <li> <a class="inicio">SERIES</a></li>
+            <li> <a class="inicio" href="./favorite.html">FAVORITOS</a></li>
+            <li class="Resultado">
+                <form action="./search-results.html" method="GET">
+                    <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a
+                                href="./search-results.html"></a></i></button>
+                    <input type="text" value="" name="name" placeholder="Buscador">
+                </form>
+            </li>
+        </ul>
 
-     <h3>Tus series favoritas</h3>
+    </header>
 
-          <section class="favorite-series">
-          </section>
-       
-        <h3>Tus peliculas favoritas</h3>
+    <section class="favoritelist"></section>
 
-         <section class="favorite-movie">
-         </section>
+    <h3>Tus series favoritas</h3>
+
+    <section class="favorite-series">
+    </section>
+
+    <h3>Tus peliculas favoritas</h3>
+
+    <section class="favorite-movie">
+    </section>
 
 
     <footer>
-        <span>Copias del contenido audiovisual se encuentra prohibido por la ley número 695 del codigo penal Argentino.</span>
+        <span>Copias del contenido audiovisual se encuentra prohibido por la ley número 695 del codigo penal
+            Argentino.</span>
         <span>Todos los derechos de Flix se le adjudican a sus respectivos creadores.</span>
         <span>¿Preguntas? Llama al 0800 678 594 marcando 0 para ayuda.</span>
         <span>Joaquin Huergo, Agustin Droullier y Mariana Guzman.</span>
-        <img class="themovie"src="./img/Logo-themoviebd.png" alt="the movie bd">
-    </footer>  
+        <img class="themovie" src="./img/Logo-themoviebd.png" alt="the movie bd">
+    </footer>
 
-  <script src="./js/headeryfooter.js"></script>
-  <script src="./js/favorite.js"></script>       
+    <script src="./js/headeryfooter.js"></script>
+    <script src="./js/favorite.js"></script>
 
 </body>
 
