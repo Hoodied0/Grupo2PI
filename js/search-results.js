@@ -1,6 +1,6 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 
-//VALIDANDO FORMULARIO 
+//AQUI ESTOY VALIDANDO FORMULARIO 
 
 window.addEventListener("load",function(){
     let input = document.querySelector(".input")
@@ -33,7 +33,7 @@ function formValidation(form,input){
     })
 }
 
-//window.addEventListener('load',function(){
+//window.addEventListener('load',function(){ --> YA LO TENGO arriba no hace falta 
 
 let container = document.querySelector(".busqueda")
 let tituloBusqueda=document.querySelector(".titulobusqueda")
