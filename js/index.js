@@ -3,7 +3,9 @@
 window.addEventListener('load', function(){
 
 let boton1 = document.querySelector('.PeliculasMasPopulares')
-localStorage.clear()
+localStorage.removeItem('estadoboton1');
+localStorage.removeItem('estadoboton2');
+localStorage.removeItem('estadoboton3');
 let estadoboton1 = localStorage.getItem('estadoboton1')
 
 if(estadoboton1 === null || estadoboton1 === undefined){
