@@ -51,7 +51,7 @@ a{
     text-decoration: none, 
 }
 
-/* loading
+/* loading */
 
 .lds-roller {
     display: inline-block;
@@ -128,8 +128,17 @@ a{
   .lds-roller div:nth-child(8):after {
     top: 56px;
     left: 12px;
-  } */
-
+  }
+.centrado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(17, 0, 26, 0.493);
+}
+.hidden{
+  overflow: hidden;
+}
   
   @keyframes lds-roller {
     0% {
