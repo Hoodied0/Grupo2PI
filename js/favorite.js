@@ -1,6 +1,6 @@
 let favnumber = document.querySelector('.favoritelist')
-let container1 = document.querySelector('.favorite-series');
-let container2 = document.querySelector('.favorite-movie')
+let containerserie = document.querySelector('.favorite-series');
+let containermoviegi = document.querySelector('.favorite-movie')
 
 window.addEventListener('load', function(){
     let favs = getFavsStorage()
@@ -38,9 +38,7 @@ function getFavsStorage(){
 }
 
 function getAllFavsAndPrint(arrFavs){
-    /*
-    arrFavs vale [4, 8, 12]
-    */
+    
     for(let i = 0; i < arrFavs.length ; i++){
         fetch(`https://fakestoreapi.com/products/${arrFavs[i]}`)
         .then(function(resp){
