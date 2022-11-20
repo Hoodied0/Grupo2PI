@@ -21,9 +21,6 @@ let estreno = document.querySelector(".Estreno")
 let lugarimagen = document.querySelector(".lugarimagen")
 let generos = document.querySelector('#generos')
 
-   
-
-
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
