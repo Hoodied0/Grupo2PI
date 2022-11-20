@@ -1,5 +1,4 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
-
 //VALIDANDO FORMULARIO 
 
 function formValidation(form,input){
@@ -14,7 +13,7 @@ function formValidation(form,input){
     })
 }
 
- window.addEventListener('load',function(){
+ window.addEventListener('load',function(){ 
 let input = document.querySelector(".input")
 let form = document.querySelector(".formulario")
 
@@ -59,7 +58,8 @@ let container2 = document.querySelector(".section_ser")
 
 tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
 
-fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
+
+         fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
 .then(function(resp){
     return resp.json()
 })
@@ -81,14 +81,17 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keywo
     console.log("ENTRO SERIE")
     series += `<article class="articulo">
     <a href= "./detail-serie.html?id=${data.results[i].id}">
-    <img class="imagen" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
+    <img class="imagen class" src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt='${data.results[i].name}' />
     </a>
     <p class="titulocategorias"> ${data.results[i].name} </p>
     </article>`
     container.innerHTML = series
+    
 
 }}
 })
+
+
 .catch(function(error){
     console.log(error)
 })
