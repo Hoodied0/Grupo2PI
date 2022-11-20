@@ -134,10 +134,12 @@ a{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(17, 0, 26, 0.493);
+  background-color: rgba(14, 2, 48, 0.623);
 }
+      /* propiedad para evitar scrollear en el body por defecto */
+
 .hidden{
-  overflow: hidden;
+  overflow: hidden; 
 }
   
   @keyframes lds-roller {
@@ -154,19 +156,20 @@ a{
     h2{ 
         margin: 0;
         padding: 25px 0px 25px 10px;
-        font-size: 25px;
+        font-size: 25vh;
         text-decoration: none,
     }
     
     .tituloresultados {
         font-size: 25px;  
-        text-decoration: none, 
-
+      
     }
     .imagen{
-        width: 40%;
-        height: 60%;
-    }
+        width: 50%;
+        height: 80%;
+      }
+
+    
     }
     
     @media (max-width: 650px) {
@@ -182,7 +185,7 @@ a{
         text-decoration: none,
         } 
         .imagen{
-            width: 20%;
-            height: 40%;
+          width: 40%;
+          height: 60%;
         }
-    } 
+      }

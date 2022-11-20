@@ -57,11 +57,14 @@ let series = ' '
 let container2 = document.querySelector(".section_ser")
 
 tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
+// loading
 
 window.onload=function(){
     alert ("he cargado completamente la pagina")
     $("#onload").fadeOut();
-    $("body").removeClass("hidden");
+    // removemos la propiedad que evita scrollear una vez que me cargo
+    $("body").removeClass("hidden"); 
+    
 } 
 
          fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
@@ -90,6 +93,7 @@ window.onload=function(){
     </a>
     <p class="titulocategorias"> ${data.results[i].name} </p>
     </article>`
+
     container.innerHTML = series
 
 
