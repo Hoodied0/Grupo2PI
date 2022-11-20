@@ -70,8 +70,8 @@ body {
     text-align: center;
     cursor: pointer;
     margin-bottom: 2vh;
-
 }
+
 .Sugerencias1{
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +81,6 @@ body {
     width: 80vw;
     margin-left: 10vw;
     margin-right: 10vw;
-
 }
 
 .cartelera{
@@ -101,7 +100,7 @@ body {
 
 }
 
-.item {
+.item{
     width: 8.5%;
     display: flex;
     flex-direction: column;
@@ -141,15 +140,51 @@ body {
 
 .subtitulos{
     font-size:20px ;
+    margin-bottom: 15px;
 }
 
 .button1{
     margin-left: 9.25vw;
     margin-top: 10px;
+    width: 20vw;
+
 }
 
 .trailer{
-    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+.Video{
+    width:500px;
+    height: 315px;
+}
+
+.reviews{
+    color: rgb(42, 40, 39);
+    font-family: 'Rubik', sans-serif;
+    display: block;
+    align-items: center; 
+    padding: 0px 20px 0px 20px;
+}
+
+.usuario{
+    color: rgb(187, 107, 1);
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.fecha{
+    color: rgb(49, 49, 49, 0.7);
+    font-size: 14px;
+}
+
+.contenido{
+    font-size: 12px;
+    margin: 20px 20px 40px 20px;
+    padding: 5px;
+    background-color: rgb(49, 49, 49, 0.1);
 }
 
 @media (max-width: 1024px) {
@@ -173,10 +208,6 @@ body {
     .Estreno{
         font-size: 14px;
     }
- 
-    .item1{
-        justify-content: space-between;
-    }
 
     .imagenfavs{
         width: 25px;
@@ -199,6 +230,28 @@ body {
     .sugerenciasFlix{
         font-size:14px;
     }
+
+    .usuario{
+    font-size: 12px;
+    }
+
+    .fecha{
+    font-size: 10px;
+    }
+
+    .contenido{
+    font-size: 8.5px;
+    }
+
+    .Video{
+        width:350px;
+        height: 220px;
+    }
+
+    .cartelera{
+        width: 10vw;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -229,8 +282,8 @@ body {
     }
 
     .cartelera{
-     width: 200px;
-      height: 100px;
+        width: 200px;
+        height: 100px;
     }
 
     .nombres {
@@ -249,4 +302,26 @@ body {
     .sugerenciasFlix{
         font-size:11px;
     }
-} 
+
+    .usuario{
+        font-size: 9.3px;
+    }
+    
+    .fecha{
+        font-size: 7.8px;
+    }
+    
+    .contenido{
+         font-size: 6.6px;
+    }
+        
+    .Video{
+         width:270px;
+         height: 170px;
+    }
+
+    .cartelera{
+        width: 7vw;
+        height: 7.5vh;
+    }
+}

@@ -207,5 +207,75 @@ let estadorecomendaciones = localStorage.getItem('estadorecomendaciones')
         })
     
 
+let url4 = "https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
+console.log(url4)
+        
+fetch(url4)
+.then(function(response){
+return response.json()
+}
+)
+.then(function(data){
+console.log(data)
+        
+let trailer = document.querySelector(".trailer")
+let info=[]
+
+if (data === undefined){
+    info = `<h3>no hay trailers disponibles</h3>`
+    trailer.innerHTML = info
+}else{
+      for (let i = 0; i < 1; i++){
+           info += 
+               `
+                <iframe class="Video"  src="https://www.youtube.com/embed/${data.results[i].key}?controls=0&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               `
+         }
+            trailer.innerHTML = info
+       }
+}
+)
+.catch(function(error) {
+    console.log("Error: " + error);
+})
+
+
+let url5 = "https://api.themoviedb.org/3/movie/" + id + "/reviews?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US&page=1"
+console.log(url5)
+        
+fetch(url5)
+.then(function(response){
+return response.json()
+}
+)
+.then(function(data){
+console.log(data)
+        
+let reviews = document.querySelector(".reviews")
+let informacion=[]
+let fecha=""
+
+for (let i = 0; i < data.results.length; i++){
+            fecha = ""
+            for(let n = 0; n < 10; n++){
+            fecha += data.results[i].created_at[n]
+            }
+
+            informacion += 
+
+            ` <div>
+              <h2 class = "usuario">${data.results[i].author}</h2>
+              <h2 class = "fecha">${fecha}</h2>
+              </div>
+              <h3 class = "contenido">${data.results[i].content}</h3>
+            `
+    }
+reviews.innerHTML = informacion  
+}
+)
+.catch(function(error) {
+    console.log("Error: " + error);
+})
+    
 
     
