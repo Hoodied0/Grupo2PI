@@ -24,7 +24,7 @@ function AbrirCerrarPeliculas(estadoboton1, evento){
              evento.target.innerText = 'Cierra la vista de las peliculas mas populares'
              localStorage.setItem('estadoboton1', 'abierto')
              let lista = document.querySelector('#peliculasmaspopulares')
-             let peliculaspop = ""
+             let peliculaspop = []
 
              fetch('https://api.themoviedb.org/3/movie/popular?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US&page=1') 
              .then(function(response) {
@@ -55,7 +55,7 @@ function AbrirCerrarPeliculas(estadoboton1, evento){
         else {
                  evento.target.innerText = 'Clickea para ver las peliculas mas populares'
                  localStorage.setItem('estadoboton1', 'cerrado')
-                 peliculaspop = []
+                 let peliculaspop = null
                  let lista = document.querySelector('#peliculasmaspopulares')
                  lista.innerHTML = peliculaspop
 
@@ -122,7 +122,7 @@ function AbrirCerrarSeries(estadoboton2, evento){
         else {
                  evento.target.innerText = 'Clickea para ver las series mas populares'
                  localStorage.setItem('estadoboton2', 'cerrado')
-                 seriespop = []
+                 let seriespop = null
                  let lista = document.querySelector('#seriesmaspopulares')
                  lista.innerHTML = seriespop
 
@@ -188,7 +188,7 @@ function AbrirCerrarPremiadas(estadoboton3, evento){
         else {
                 evento.target.innerText = 'Clickea para ver las peliculas mas premiadas'
                 localStorage.setItem('estadoboton3', 'cerrado')
-                peliculasepremiadas = []
+                let peliculaspremiadas = null
                 let lista = document.querySelector('#peliculaspremiadas')
                 lista.innerHTML = peliculaspremiadas
     
