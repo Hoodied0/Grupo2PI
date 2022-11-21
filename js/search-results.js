@@ -1,18 +1,6 @@
 let apiKey = "399cd9827f714613d04693cee425808c"
 //VALIDANDO FORMULARIO 
 
-function formValidation(form,input){
-    form.addEventListener("submit",function(e){
-        e.preventDefault()
-        if (input.value.length<4 && input.value.length>0){ 
-        } else if (input.value.length === 0 || input.value.length === undefined ){
-           alert("Tu buscador no tiene ningun caracter")
-        }else{
-            this.submit()
-        }
-    })
-}
-
  window.addEventListener('load',function(){ 
 let input = document.querySelector(".input")
 let form = document.querySelector(".formulario")
@@ -37,7 +25,7 @@ function formValidation(form,input){
         if (input.value.length<3 && input.value.length>0){
             alert("Por favor, escribe mas de 3 caracteres")
         } else if (input.value.length === 0 || input.value.length === undefined ){
-            alert("Tu buscador no tiene ningun caracter")
+            alert("Todavia no aprendi a leer mentes, por favor escribe algun caracter ")
         }else{
             this.submit()
         }
@@ -56,19 +44,17 @@ let keyword = objMovie.get('name')
 let series = ' '
 let container2 = document.querySelector(".section_ser")
 
-tituloBusqueda.innerText=`Resultado de busqueda para: ${keyword}`
+tituloBusqueda.innerText=`Tu resultado de busqueda es : ${keyword}`
 // loading
 
-window.onload=function(){
-    alert ("he cargado completamente la pagina")
+    window.onload=function(){
+    alert ("he cargado completamente tu pagina")
     $("#onload").fadeOut();
     // removemos la propiedad que evita scrollear una vez que me cargo
-    $("body").removeClass("hidden"); 
-    
-} 
-
-         fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
-.then(function(resp){
+    $("body").removeClass("hidden");    
+      } 
+ fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
+    .then(function(resp){
     return resp.json()
 })
 .then(function(data){
@@ -84,7 +70,9 @@ window.onload=function(){
             <p class="titulocategorias"> ${data.results[i].title} </p>
          
         </article>`
+
         container.innerHTML = movies
+        
 }   else {
     console.log("ENTRO SERIE")
     series += `<article class="articulo">
