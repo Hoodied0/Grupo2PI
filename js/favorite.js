@@ -1,6 +1,10 @@
 let favnumber = document.querySelector('.favoritelist')
-let container1 = document.querySelector('.favorite-series');
-let container2 = document.querySelector('.favorite-movie')
+let containerserie = document.querySelector('.favorite-series');
+let containermovie = document.querySelector('.favorite-movie')
+let id = localStorage.getItem('favoritos')
+let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
+let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
+console.log(url1)
 
 window.addEventListener('load', function(){
     let favs = getFavsStorage()
@@ -38,24 +42,19 @@ function getFavsStorage(){
 }
 
 function getAllFavsAndPrint(arrFavs){
-    /*
-    arrFavs vale [4, 8, 12]
-    */
+    
     for(let i = 0; i < arrFavs.length ; i++){
-        fetch(`https://fakestoreapi.com/products/${arrFavs[i]}`)
+        fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=a4ec5a496172e67f219cf69a6790a8ca/`)
         .then(function(resp){
             return resp.json()
         })
         .then(function(data){
-            container.innerHTML += `
-            <li>
+            containermovie.innerHTML += `
+            
                 <article>
-                    <img class='imagen' src='${data.image}' >
-                    <a href='./details.html?id=${data.id}'>
-                    <h5>${data.title}</h5>
-                    </a>
+                <img src="https://image.tmdb.org/t/p/w500${data.results.US.buy[i].logo_path}" class="imagen">
                 </article>
-            </li>
+            
             `
         })
         .catch(function(error){
