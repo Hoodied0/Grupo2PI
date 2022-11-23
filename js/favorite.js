@@ -8,7 +8,7 @@ let idserie = localStorage.getItem('favoritoserie')
 
 window.addEventListener('load', function(){
 
-let favsser = getFavsStorage()
+let favsser = getFavsStorage1()
     
     if(favsser.length == 0){
         favnumberserie.innerHTML = `
@@ -19,22 +19,22 @@ let favsser = getFavsStorage()
     } else if(favsser.length == 1) {
         favnumberserie.innerHTML += `
         <h2>
-            Tienes ${favs.length} serie favorita
+            Tienes ${favser.length} serie favorita
         </h2>
         ` 
     } else {
         favnumberserie.innerHTML += `
         <h2>
-            Tienes ${favs.length} series favoritas
+            Tienes ${favser.length} series favoritas
         </h2>
         ` 
-        getAllFavsAndPrint(favs)
+        getAllFavsAndPrint1(favser)
     }
 })
 
 window.addEventListener('load', function(){
 
-    let favmov = getFavsStorage()
+    let favmov = getFavsStorage2()
         
         if(favmov.length == 0){
             favnumbermovie.innerHTML = `
@@ -45,16 +45,16 @@ window.addEventListener('load', function(){
         } else if(favs.length == 1) {
             favnumbermovie.innerHTML += `
             <h2>
-                Tienes ${favs.length} pelicula favorita
+                Tienes ${favmov.length} pelicula favorita
             </h2>
             ` 
         } else {
             favnumbermovie.innerHTML += `
             <h2>
-                Tienes ${favs.length} peliculas favoritas
+                Tienes ${favmov.length} peliculas favoritas
             </h2>
             ` 
-            getAllFavsAndPrint(favs)
+            getAllFavsAndPrint2(favmov)
         }
     })
 
