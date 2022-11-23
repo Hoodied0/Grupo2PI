@@ -43,26 +43,46 @@ function getFavsStorage(){
 
 function getAllFavsAndPrint (arrFavs){
     for(let i=0 ; i< arrFavs.length ; i++){
-        fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-        .then(function(resp){
-            return resp.json()
-        })
-        .then(function(data){ 
-            
-            console.log(data)
-            containermovie.innerHTML += `
-            <li>
+        let = containermovie = []
+        if (`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`!== undefined){
+             fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+             .then(function(resp){
+                  return resp.json()
+             })
+             .then(function(data){ 
+             console.log(data)
+             containermovie.innerHTML+= `
+                    <article>
+                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                         <a href='./detail-movie.html?id=${data.id}'>
+                         <p>${data.title}</p>
+                         </a>
+                    </article>
+                    `
+             })
+            .catch(function(error){
+                console.log(error)
+            })
+        }else{
+            fetch(`https://api.themoviedb.org/3/tv/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+            .then(function(respuesta){
+                return respuesta.json()
+            })
+            .then(function(info){
+            console.log(info)
+            containermovie.innerHTML+= `
                 <article>
-                    <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
-                    <a href='./detail-movie.html?id=${data.id}'>
-                    <p>${data.title}</p>
+                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path}'
+                    <a href='./detail-serie.html?id=${info.id}'>
+                    <p>${info.title}</p>
                     </a>
                 </article>
-            </li>
             `
-        })
-        .catch(function(error){
-            console.log(error)
-        })
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+            }
+   
     }
-}
+}    
