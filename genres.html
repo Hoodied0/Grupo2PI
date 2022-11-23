@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search results</title>
-    <link rel="stylesheet" href="css/uikit.min.css" />
-
+    <title>Inicio</title>
     <link rel="stylesheet" href="css/headeryfooter.css">
-    <link rel="stylesheet" href="css/search-results.css">
+    <link rel="stylesheet" href="css/genres.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body class="hidden">
 
+<body>
 
     <header class="estructura"> 
         
@@ -26,64 +24,44 @@
                 </a>
             </li>
             <li> <a class= "inicio" href="./index.html">INICIO</a> </li>
-            <li> <a class= "inicio">PELICULAS</a></li>
-            <li> <a class= "inicio">SERIES</a></li>
+            <li> <a class= "inicio" href="./genres.html">GENEROS</a></li>
             <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
-
             <li class="Resultado"> 
-         <form class="formulario" action="./search-results.html" method="GET"> 
-                <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a>  </i>
-                
-                </button> 
-                <input class="input"type = "text" value="" name="name" placeholder="Buscador"> 
-                <p class="error"> </p> 
-            
-        </form>
-                 
+                <form action="./search-results.html" method="GET"> 
+                <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a></i></button> 
+                <input type = "text" value="" name="name" placeholder="Buscador"> 
+                </form>
             </li>
-         </ul>     
+         </ul>              
+        
     </header>
 
-    <!-- loading -->
 
-    <div class="centrado " id="onload">
-        <div class="lds-roller class=loader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
 
-    <h1 class="titulobusqueda "></h1>
+    <h2 class = "GenerosSeries"></h2>
 
-    <section class="busqueda class=uk-animation-toggle" tabindex="0">
-
-        <article class="resultado-busqueda class=uk-animation-fade"> 
-            
-            <h2>No se han encontrado resultado para tu busqueda</h2>
-            
-        </article>
+    <section class = "peliculasyseries" id="generosseries"> 
 
     </section>
-    
-     
+
+<h2 class = "GenerosMovie"></h2>
+
+    <section class = "peliculasyseries" id="generosmovie"> 
+
+    </section>
+
     <footer>
         <span>Copias del contenido audiovisual se encuentra prohibido por la ley número 695 del codigo penal Argentino.</span>
         <span>Todos los derechos de Flix se le adjudican a sus respectivos creadores.</span>
         <span>¿Preguntas? Llama al 0800 678 594 marcando 0 para ayuda.</span>
         <span>Joaquin Huergo, Agustin Droullier y Mariana Guzman.</span>
-        <img class="themovie"src="./img/Logo-themoviebd.png" alt="the movie bd">
+        <img class="themovie" src="./img/Logo-themoviebd.png" alt="the movie bd">
     </footer>  
 
  <script src="./js/headeryfooter.js"></script>
- <script src="./js/search-results.js"></script> 
-<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
+ <script src="./js/genres.js"></script>
 
 </body>
 
 </html>
+

@@ -7,7 +7,17 @@ let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
 console.log(url1)
 
 window.addEventListener('load', function(){
-    let favs = getFavsStorage()
+
+let favnumber = document.querySelector('.favoritelist')
+let containerserie = document.querySelector('.favorite-series');
+let containermovie = document.querySelector('.favorite-movie')
+let id = localStorage.getItem('favoritos')
+let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
+let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
+console.log(url1)
+
+let favs = getFavsStorage()
+    
     if(favs.length == 0){
         favnumber.innerHTML = `
         <section>
@@ -54,7 +64,7 @@ function getAllFavsAndPrint (arrFavs){
              console.log(data)
              containermovie.innerHTML+= `
                     <article>
-                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path} alt="${data.name}'
                          <a href='./detail-movie.html?id=${data.id}'>
                          <p>${data.title}</p>
                          </a>
@@ -73,7 +83,7 @@ function getAllFavsAndPrint (arrFavs){
             console.log(info)
             containermovie.innerHTML+= `
                 <article>
-                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path}'
+                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path} alt="${data.name}'
                     <a href='./detail-serie.html?id=${info.id}'>
                     <p>${info.title}</p>
                     </a>
@@ -86,4 +96,4 @@ function getAllFavsAndPrint (arrFavs){
             }
    
     }
-}    
+}
