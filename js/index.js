@@ -6,6 +6,7 @@ let boton1 = document.querySelector('.PeliculasMasPopulares')
 localStorage.removeItem('estadoboton1');
 localStorage.removeItem('estadoboton2');
 localStorage.removeItem('estadoboton3');
+localStorage.removeItem('estadoboton5');
 let estadoboton1 = localStorage.getItem('estadoboton1')
 
 if(estadoboton1 === null || estadoboton1 === undefined){
@@ -202,6 +203,75 @@ boton3.addEventListener('click', function (evento){
 
 
 })
+
+
+
+
+
+
+
+
+
+let boton5 = document.querySelector('.GenerosSeries')
+let estadoboton5 = localStorage.getItem('estadoboton5')
+    
+if(estadoboton5 === null || estadoboton5 === undefined){
+        localStorage.setItem('estadoboton5', 'cerrado')
+        boton5.innerText='Clickea para ver los generos de series'}
+else {
+        if(estadoboton5 === 'abierto'){
+            boton5.innerText = 'Cierra la vista de los generos de series'}
+        else {
+            boton5.innerText = 'Clickea para ver los generos de series'
+        }
+    }
+        
+function AbrirCerrarGenerosSeries(estadoboton5, evento){
+        if(estadoboton5 === 'cerrado'){
+            evento.target.innerText = 'Cierra la vista de los generos de series'
+            localStorage.setItem('estadoboton5', 'abierto')
+            let lista = document.querySelector('#generosseries')
+            let GenerosSeries = ""
+    
+            fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US') 
+            .then(function(response) {
+            return response.json()
+            })
+            .then(function(data) {
+            console.log(data);
+            for (let i = 0; i < data.results.length; i++){
+           GenerosSeries += 
+    
+             `<article class="item">
+                <div>
+                <a href="./detail-genres.html?id=${data.results[i].id}">
+                <h3> ${data.results[i].name} </h3> </a>
+               
+            
+              </article>`
+            }
+            lista.innerHTML = GenerosSeries
+            })
+            .catch(function(error) {
+            console.log("Error: " + error);
+            }
+            )
+            }
+    
+        else {
+                evento.target.innerText = 'Clickea para ver los generos de series'
+                localStorage.setItem('estadoboton5', 'cerrado')
+                let GenerosSeries = null
+                let lista = document.querySelector('#generosseries')
+                lista.innerHTML = GenerosSeries
+    
+            }
+}
+    
+boton5.addEventListener('click', function (evento){
+        let storage = localStorage.getItem('estadoboton5')
+        AbrirCerrarGenerosSeries(storage, evento)
+    })
 
 
 
