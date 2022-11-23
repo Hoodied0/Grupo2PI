@@ -53,7 +53,7 @@ function getAllFavsAndPrint (arrFavs){
              console.log(data)
              containermovie.innerHTML+= `
                     <article>
-                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path} alt="${data.name}'
                          <a href='./detail-movie.html?id=${data.id}'>
                          <p>${data.title}</p>
                          </a>
@@ -72,7 +72,7 @@ function getAllFavsAndPrint (arrFavs){
             console.log(info)
             containermovie.innerHTML+= `
                 <article>
-                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path}'
+                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path} alt="${data.name}'
                     <a href='./detail-serie.html?id=${info.id}'>
                     <p>${info.title}</p>
                     </a>
@@ -85,4 +85,4 @@ function getAllFavsAndPrint (arrFavs){
             }
    
     }
-}    
+}

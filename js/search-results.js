@@ -46,11 +46,10 @@ let container2 = document.querySelector(".section_ser")
 
 tituloBusqueda.innerText=`Tu resultado de busqueda es : ${keyword}`
 // loading
-
     window.onload=function(){
     alert ("he cargado completamente tu pagina")
     $("#onload").fadeOut();
-    // removemos la propiedad que evita scrollear una vez que me cargo
+// removemos la propiedad que evita scrollear una vez que me cargo
     $("body").removeClass("hidden");    
       } 
  fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
