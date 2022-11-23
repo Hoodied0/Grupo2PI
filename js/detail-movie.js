@@ -24,7 +24,7 @@ let generos = document.querySelector('#generos')
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       `<a  href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
+       `<a  href="./detail-genres-movie.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
      
     }
 
@@ -73,6 +73,7 @@ for (let i = 0; i < data.results.US.buy.length; i++){
 .catch(function(error) {
     console.log("Error: " + error);
 })
+
 
 
 
@@ -140,6 +141,9 @@ function removeFavorite(id, storage){
 
 
 
+
+
+
 let url3 = "https://api.themoviedb.org/3/movie/" + id + "/recommendations?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US&page=1"
 console.log(url3)
 
@@ -202,6 +206,7 @@ let estadorecomendaciones = localStorage.getItem('estadorecomendaciones')
             let storage = localStorage.getItem('estadorecomendaciones')
             AbrirCerrarRecomendaciones(storage, evento)
         })
+
     
 
 let url4 = "https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"

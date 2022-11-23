@@ -8,14 +8,6 @@ console.log(url1)
 
 window.addEventListener('load', function(){
 
-let favnumber = document.querySelector('.favoritelist')
-let containerserie = document.querySelector('.favorite-series');
-let containermovie = document.querySelector('.favorite-movie')
-let id = localStorage.getItem('favoritos')
-let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
-let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
-console.log(url1)
-
 let favs = getFavsStorage()
     
     if(favs.length == 0){
