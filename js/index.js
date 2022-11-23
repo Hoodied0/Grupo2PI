@@ -226,6 +226,8 @@ else {
         }
     }
         
+    // generos 
+
 function AbrirCerrarGenerosSeries(estadoboton5, evento){
         if(estadoboton5 === 'cerrado'){
             evento.target.innerText = 'Cierra la vista de los generos de series'
@@ -239,7 +241,7 @@ function AbrirCerrarGenerosSeries(estadoboton5, evento){
             })
             .then(function(data) {
             console.log(data);
-            for (let i = 0; i < data.results.length; i++){
+            for (let i = 0; i<data.results.length; i++){
            GenerosSeries += 
     
              `<article class="item">
