@@ -8,7 +8,7 @@ let idserie = localStorage.getItem('favoritoserie')
 
 window.addEventListener('load', function(){
 
-let favser = getFavsStorage1()
+    let favser = getFavsStorage1()
     
     if(favser.length == 0){
         favnumberserie.innerHTML = `
@@ -21,7 +21,10 @@ let favser = getFavsStorage1()
         <h2>
             Tienes ${favser.length} serie favorita
         </h2>
+        
         ` 
+        getAllFavsAndPrint1(favser)
+
     } else {
         favnumberserie.innerHTML += `
         <h2>
@@ -30,9 +33,7 @@ let favser = getFavsStorage1()
         ` 
         getAllFavsAndPrint1(favser)
     }
-})
 
-window.addEventListener('load', function(){
 
     let favmov = getFavsStorage2()
         
@@ -48,6 +49,7 @@ window.addEventListener('load', function(){
                 Tienes ${favmov.length} pelicula favorita
             </h2>
             ` 
+            getAllFavsAndPrint2(favmov)
         } else {
             favnumbermovie.innerHTML += `
             <h2>
@@ -56,7 +58,8 @@ window.addEventListener('load', function(){
             ` 
             getAllFavsAndPrint2(favmov)
         }
-    })
+
+})
 
 function getFavsStorage1(){
     let storage = localStorage.getItem('favoritoserie')
@@ -92,7 +95,7 @@ function getAllFavsAndPrint1 (arrFavs1){
                 <article>
                     <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
                     <a href='./detail-movie.html?id=${data.id}'>
-                    <p>${data.title}</p>
+                    <p>${data.name}</p>
                     </a>
                 </article>
             </li>
@@ -104,6 +107,31 @@ function getAllFavsAndPrint1 (arrFavs1){
     }
 }
 
+function getAllFavsAndPrint2 (arrFavs2){
+    for(let i=0 ; i< arrFavs2.length ; i++){
+        fetch(`https://api.themoviedb.org/3/movie/${arrFavs2[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+        .then(function(resp){
+            return resp.json()
+        })
+        .then(function(data){ 
+            
+            console.log(data)
+            containermovie.innerHTML += `
+            <li>
+                <article>
+                    <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                    <a href='./detail-movie.html?id=${data.id}'>
+                    <p>${data.title}</p>
+                    </a>
+                </article>
+            </li>
+            `
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    }
+}
 
 
 
