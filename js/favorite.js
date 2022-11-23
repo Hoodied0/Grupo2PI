@@ -8,15 +8,15 @@ let idserie = localStorage.getItem('favoritoserie')
 
 window.addEventListener('load', function(){
 
-let favsser = getFavsStorage1()
+let favser = getFavsStorage1()
     
-    if(favsser.length == 0){
+    if(favser.length == 0){
         favnumberserie.innerHTML = `
         <section>
             <h2>No tienes series favoritas</h2>
         </section>
         `
-    } else if(favsser.length == 1) {
+    } else if(favser.length == 1) {
         favnumberserie.innerHTML += `
         <h2>
             Tienes ${favser.length} serie favorita
@@ -42,7 +42,7 @@ window.addEventListener('load', function(){
                 <h2>No tienes peliculas favoritas</h2>
             </section>
             `
-        } else if(favs.length == 1) {
+        } else if(favmov.length == 1) {
             favnumbermovie.innerHTML += `
             <h2>
                 Tienes ${favmov.length} pelicula favorita
@@ -68,6 +68,15 @@ function getFavsStorage1(){
     }
 }
 
+function getFavsStorage2(){
+    let storage = localStorage.getItem('favoritomovie')
+
+    if(storage !== null && storage !== undefined){
+        return JSON.parse(storage)
+    } else {
+        return []
+    }
+}
 
 function getAllFavsAndPrint1 (arrFavs1){
     for(let i=0 ; i< arrFavs1.length ; i++){
@@ -95,42 +104,11 @@ function getAllFavsAndPrint1 (arrFavs1){
     }
 }
 
-function getFavsStorage2(){
-    let storage = localStorage.getItem('favoritomovie')
-
-    if(storage !== null && storage !== undefined){
-        return JSON.parse(storage)
-    } else {
-        return []
-    }
-}
 
 
-function getAllFavsAndPrint2 (arrFavs2){
-    for(let i=0 ; i< arrFavs2.length ; i++){
-        fetch(`https://api.themoviedb.org/3/movie/${arrFavs2[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-        .then(function(resp){
-            return resp.json()
-        })
-        .then(function(data){ 
-            
-            console.log(data)
-            containermovie.innerHTML += `
-            <li>
-                <article>
-                    <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
-                    <a href='./detail-movie.html?id=${data.id}'>
-                    <p>${data.title}</p>
-                    </a>
-                </article>
-            </li>
-            `
-        })
-        .catch(function(error){
-            console.log(error)
-        })
-    }
-}
+
+
+
 
 
 
