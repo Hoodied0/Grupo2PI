@@ -41,6 +41,7 @@ function getFavsStorage(){
     }
 }
 
+
 function getAllFavsAndPrint (arrFavs){
     for(let i=0 ; i< arrFavs.length ; i++){
         let = containermovie = []
