@@ -1,7 +1,8 @@
 let favnumber = document.querySelector('.favoritelist')
 let containerserie = document.querySelector('.favorite-series');
 let containermovie = document.querySelector('.favorite-movie')
-let id = localStorage.getItem('favoritos')
+let idmovie = localStorage.getItem('favoritomovie')
+let idserie = localStorage.getItem('favoritoserie')
 let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
 let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
 console.log(url1)
