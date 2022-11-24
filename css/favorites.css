@@ -61,19 +61,14 @@ body{
     text-decoration: none;
     
  }
+.favorite-movie{
+    display: flex;
+}
 
- .favoritemovie {
+.favorite-serie{
     display: flex;
-    flex-wrap: wrap
- }
- .favoriteserie {
-    display: flex;
-    flex-wrap: wrap
- }
- .flex1{
-    display: flex;
-    flex-wrap: wrap
- }
+}
+
 @media (max-width: 1024px) {
 
 .estructura{
