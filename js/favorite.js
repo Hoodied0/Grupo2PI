@@ -92,7 +92,7 @@ function getAllFavsAndPrint1 (arrFavs1){
             console.log(data)
             containerserie.innerHTML += `
             <li>
-                <article>
+                <articleclass = "flex1">
                 <a class = "favstuff" href='./detail-serie.html?id=${data.id}'>
                     <img width ="200px" height ="200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
                     <br>
@@ -120,7 +120,7 @@ function getAllFavsAndPrint2 (arrFavs2){
             console.log(data)
             containermovie.innerHTML += `
             
-                <article>
+                <article class = "flex1">
                 <a class = "favstuff" href='./detail-movie.html?id=${data.id}'>
                     <img width ="200px" height ="200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
                     <br>

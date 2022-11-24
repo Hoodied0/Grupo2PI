@@ -4,12 +4,13 @@
 
 body{
     margin: -16px 0px 0px 0px;
+    padding: 0;
+    min-width: 100vw;
+    background-image: url(../img/17564656_SL_042620_30310_19.jpg);
     background-repeat: no-repeat;
-    background-position: 50px 0px 0px 0px;
     background-size: cover;
-    background-color: bisque;
-    
 }
+
 .favorite{
     display: flex;
     justify-content: space-around;
@@ -58,9 +59,21 @@ body{
     font-size: 25px;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
+    
  }
 
-
+ .favoritemovie {
+    display: flex;
+    flex-wrap: wrap
+ }
+ .favoriteserie {
+    display: flex;
+    flex-wrap: wrap
+ }
+ .flex1{
+    display: flex;
+    flex-wrap: wrap
+ }
 @media (max-width: 1024px) {
 
 .estructura{
