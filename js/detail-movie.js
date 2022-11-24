@@ -77,6 +77,7 @@ for (let i = 0; i < data.results.US.buy.length; i++){
 
 
 
+
 let container = document.querySelector('.button1')
 
 fetch(url)
@@ -137,6 +138,9 @@ function removeFavorite(id, storage){
     let storageToString = JSON.stringify(storage)
     localStorage.setItem('favoritomovie', storageToString)
 }
+
+
+
 
 
 
@@ -202,6 +206,7 @@ let estadorecomendaciones = localStorage.getItem('estadorecomendaciones')
             let storage = localStorage.getItem('estadorecomendaciones')
             AbrirCerrarRecomendaciones(storage, evento)
         })
+
     
 
 let url4 = "https://api.themoviedb.org/3/movie/" + id + "/videos?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"

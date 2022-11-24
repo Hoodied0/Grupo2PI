@@ -1,37 +1,37 @@
-let favnumberserie = document.querySelector('.favoritelistserie')
-let favnumbermovie = document.querySelector('.favoritelistmovie')
-let containerserie = document.querySelector('.favorite-series')
+let favnumber = document.querySelector('.favoritelist')
+let containerserie = document.querySelector('.favorite-series');
 let containermovie = document.querySelector('.favorite-movie')
-let idmovie = localStorage.getItem('favoritomovie')
-let idserie = localStorage.getItem('favoritoserie')
-
+let id = localStorage.getItem('favoritos')
+let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
+let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
+console.log(url1)
 
 window.addEventListener('load', function(){
 
     let favser = getFavsStorage1()
     
-    if(favser.length == 0){
-        favnumberserie.innerHTML = `
+    if(favs.length == 0){
+        favnumber.innerHTML = `
         <section>
-            <h2>No tienes series favoritas</h2>
+            <h2>No tienes favoritos</h2>
         </section>
         `
-    } else if(favser.length == 1) {
-        favnumberserie.innerHTML += `
+    } else if(favs.length == 1) {
+        favnumber.innerHTML += `
         <h2>
-            Tienes ${favser.length} serie favorita
+            Tienes ${favs.length} favorito
         </h2>
         
         ` 
         getAllFavsAndPrint1(favser)
 
     } else {
-        favnumberserie.innerHTML += `
+        favnumber.innerHTML += `
         <h2>
-            Tienes ${favser.length} series favoritas
+            Tienes ${favs.length} favoritos
         </h2>
         ` 
-        getAllFavsAndPrint1(favser)
+        getAllFavsAndPrint(favs)
     }
 
 
@@ -61,8 +61,8 @@ window.addEventListener('load', function(){
 
 })
 
-function getFavsStorage1(){
-    let storage = localStorage.getItem('favoritoserie')
+function getFavsStorage(){
+    let storage = localStorage.getItem('favoritos')
 
     if(storage !== null && storage !== undefined){
         return JSON.parse(storage)
@@ -71,15 +71,6 @@ function getFavsStorage1(){
     }
 }
 
-function getFavsStorage2(){
-    let storage = localStorage.getItem('favoritomovie')
-
-    if(storage !== null && storage !== undefined){
-        return JSON.parse(storage)
-    } else {
-        return []
-    }
-}
 
 function getAllFavsAndPrint1 (arrFavs1){
     for(let i=0 ; i< arrFavs1.length ; i++){
@@ -101,12 +92,14 @@ function getAllFavsAndPrint1 (arrFavs1){
                 </article>
           
             `
-        })
-        .catch(function(error){
-            console.log(error)
-        })
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+            }
+   
     }
-}
+
 
 function getAllFavsAndPrint2 (arrFavs2){
     for(let i=0 ; i< arrFavs2.length ; i++){

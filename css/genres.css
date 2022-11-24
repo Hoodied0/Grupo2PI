@@ -10,3 +10,19 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.peliculasyseries{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+h2{
+    cursor: pointer;
+    margin: 0;
+    padding: 50px 0px 25px 10px;
+    font-family: 'Balthazar', serif;
+    font-size: 35px;
+}
