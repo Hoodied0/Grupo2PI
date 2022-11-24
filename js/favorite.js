@@ -91,14 +91,15 @@ function getAllFavsAndPrint1 (arrFavs1){
             
             console.log(data)
             containerserie.innerHTML += `
-            <li>
+           
                 <article>
+                <a href='./detail-movie.html?id=${data.id}'>
                     <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
-                    <a href='./detail-movie.html?id=${data.id}'>
-                    <p>${data.name}</p>
+                   
+                    <h4>${data.name}</h4>
                     </a>
                 </article>
-            </li>
+          
             `
         })
         .catch(function(error){
@@ -117,14 +118,14 @@ function getAllFavsAndPrint2 (arrFavs2){
             
             console.log(data)
             containermovie.innerHTML += `
-            <li>
+            
                 <article>
+                <a href='./detail-movie.html?id=${data.id}'>
                     <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
-                    <a href='./detail-movie.html?id=${data.id}'>
-                    <p>${data.title}</p>
+                    <h4>${data.title}</h4>
                     </a>
                 </article>
-            </li>
+           
             `
         })
         .catch(function(error){
