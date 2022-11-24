@@ -84,8 +84,8 @@ return response.json()
 )
 .then(function(data){
 
-let favoritos = getStorage() 
-let estaMiProducto = favoritos.includes(data.id) 
+let favoritoserie = getStorage() 
+let estaMiProducto = favoritoserie.includes(data.id) 
 
 let textoInicial = ' '
 if(estaMiProducto){
@@ -99,14 +99,14 @@ let btnFavs = document.querySelector('.favoritos')
 
 btnFavs.addEventListener('click', function(e){
     console.log(e)        
-    let favoritos = getStorage()
-    let estaMiProducto = favoritos.includes(data.id)
+    let favoritoserie = getStorage()
+    let estaMiProducto = favoritoserie.includes(data.id)
 
     if(estaMiProducto){
-        removeFavorite(data.id, favoritos)
+        removeFavorite(data.id, favoritoserie)
         e.target.innerText='Agregar a Favoritos'
     } else {
-        addFavorite(data.id, favoritos)
+        addFavorite(data.id, favoritoserie)
         e.target.innerText='Sacar de Favoritos'
     }
 
@@ -115,7 +115,7 @@ btnFavs.addEventListener('click', function(e){
 })
 
 function getStorage(){
-    let storage = localStorage.getItem('favoritos')
+    let storage = localStorage.getItem('favoritoserie')
     if(storage !== null && storage !== undefined){
         return JSON.parse(storage)
     } else {
@@ -126,14 +126,14 @@ function getStorage(){
 function addFavorite(id, storage){
     storage.push(id)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem('favoritos', storageToString)
+    localStorage.setItem('favoritoserie', storageToString)
 }
 
 function removeFavorite(id, storage){
     let position = storage.indexOf(id)
     storage.splice(position, 1)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem('favoritos', storageToString)
+    localStorage.setItem('favoritoserie', storageToString)
 }
 
 
