@@ -23,7 +23,7 @@ let generos = document.querySelector('#generos')
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       `<a  href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
+       `<a  href="./detail-genres-series.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
      
     }
 

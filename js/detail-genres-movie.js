@@ -18,6 +18,7 @@ for (let i = 0; i < data.results.length; i++){
     listagenerosmovie.innerHTML += 
         
        `
+       <a href="./detail-movie.html?id=${data.results[i].id}">
        <div class="card">
 
        <div class="card-header">
@@ -34,6 +35,7 @@ for (let i = 0; i < data.results.length; i++){
 
         </div>
         </div>
+        </a>
    `
      
     }
