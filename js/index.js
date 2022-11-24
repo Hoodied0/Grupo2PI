@@ -206,10 +206,6 @@ boton3.addEventListener('click', function (evento){
 
 
 
-<<<<<<< HEAD
-
-
-
 
 
 let boton5 = document.querySelector('.GenerosSeries')
@@ -277,5 +273,3 @@ boton5.addEventListener('click', function (evento){
 
 
 
-=======
->>>>>>> 7fea4d8d89739fa99014697914ae0825184a8022
