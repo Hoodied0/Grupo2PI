@@ -8,7 +8,7 @@ console.log(url1)
 
 window.addEventListener('load', function(){
 
-let favs = getFavsStorage()
+    let favser = getFavsStorage1()
     
     if(favs.length == 0){
         favnumber.innerHTML = `
@@ -21,7 +21,10 @@ let favs = getFavsStorage()
         <h2>
             Tienes ${favs.length} favorito
         </h2>
+        
         ` 
+        getAllFavsAndPrint1(favser)
+
     } else {
         favnumber.innerHTML += `
         <h2>
@@ -30,8 +33,33 @@ let favs = getFavsStorage()
         ` 
         getAllFavsAndPrint(favs)
     }
-})
 
+
+    let favmov = getFavsStorage2()
+        
+        if(favmov.length == 0){
+            favnumbermovie.innerHTML = `
+            <section>
+                <h2>No tienes peliculas favoritas</h2>
+            </section>
+            `
+        } else if(favmov.length == 1) {
+            favnumbermovie.innerHTML += `
+            <h2>
+                Tienes ${favmov.length} pelicula favorita
+            </h2>
+            ` 
+            getAllFavsAndPrint2(favmov)
+        } else {
+            favnumbermovie.innerHTML += `
+            <h2>
+                Tienes ${favmov.length} peliculas favoritas
+            </h2>
+            ` 
+            getAllFavsAndPrint2(favmov)
+        }
+
+})
 
 function getFavsStorage(){
     let storage = localStorage.getItem('favoritos')
@@ -44,42 +72,25 @@ function getFavsStorage(){
 }
 
 
-function getAllFavsAndPrint (arrFavs){
-    for(let i=0 ; i< arrFavs.length ; i++){
-        let = containermovie = []
-        if (`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`!== undefined){
-             fetch(`https://api.themoviedb.org/3/movie/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-             .then(function(resp){
-                  return resp.json()
-             })
-             .then(function(data){ 
-             console.log(data)
-             containermovie.innerHTML+= `
-                    <article>
-                         <img  src='https://image.tmdb.org/t/p/w500/${data.poster_path} alt="${data.name}'
-                         <a href='./detail-movie.html?id=${data.id}'>
-                         <p>${data.title}</p>
-                         </a>
-                    </article>
-                    `
-             })
-            .catch(function(error){
-                console.log(error)
-            })
-        }else{
-            fetch(`https://api.themoviedb.org/3/tv/${arrFavs[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
-            .then(function(respuesta){
-                return respuesta.json()
-            })
-            .then(function(info){
-            console.log(info)
-            containermovie.innerHTML+= `
+function getAllFavsAndPrint1 (arrFavs1){
+    for(let i=0 ; i< arrFavs1.length ; i++){
+        fetch(`https://api.themoviedb.org/3/tv/${arrFavs1[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+        .then(function(resp){
+            return resp.json()
+        })
+        .then(function(data){ 
+            
+            console.log(data)
+            containerserie.innerHTML += `
+           
                 <article>
-                    <img  src='https://image.tmdb.org/t/p/w500/${info.poster_path} alt="${data.name}'
-                    <a href='./detail-serie.html?id=${info.id}'>
-                    <p>${info.title}</p>
+                <a href='./detail-serie.html?id=${data.id}'>
+                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                   
+                    <h4>${data.name}</h4>
                     </a>
                 </article>
+          
             `
             })
             .catch(function(error){
@@ -88,4 +99,40 @@ function getAllFavsAndPrint (arrFavs){
             }
    
     }
+
+
+function getAllFavsAndPrint2 (arrFavs2){
+    for(let i=0 ; i< arrFavs2.length ; i++){
+        fetch(`https://api.themoviedb.org/3/movie/${arrFavs2[i]}?api_key=c71f5b75c8e3c6372967558c16ff597f`)
+        .then(function(resp){
+            return resp.json()
+        })
+        .then(function(data){ 
+            
+            console.log(data)
+            containermovie.innerHTML += `
+            
+                <article>
+                <a href='./detail-movie.html?id=${data.id}'>
+                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                    <h4>${data.title}</h4>
+                    </a>
+                </article>
+           
+            `
+        })
+        .catch(function(error){
+            console.log(error)
+        })
+    }
 }
+
+
+
+
+
+
+
+
+
+

@@ -144,6 +144,9 @@ a{
 .hidden{
   overflow: hidden; 
 }
+.uk-animation-fade{
+  
+}
   
   @keyframes lds-roller {
     0% {

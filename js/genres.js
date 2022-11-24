@@ -33,7 +33,7 @@ function AbrirCerrarGenerosSeries(estadoboton5, evento){
     
                 `<article class="item">
                    <div>
-                   <a href="./detail-genres-series.html?id=${data.genres[i].id}">
+                   <a href="./detail-genres-series.html?id=${data.genres[i].id}&genero=${data.genres[i].name}">
                     <h3> ${data.genres[i].name} </h3> </a>
 
                 </article>`
@@ -93,7 +93,7 @@ function AbrirCerrarGenerosMovie(estadoboton6, evento){
     
                 `<article class="item">
                    <div>
-                   <a href="./detail-genres-movie.html?id=${data.genres[i].id}">
+                   <a href="./detail-genres-movie.html?id=${data.genres[i].id}&genero=${data.genres[i].name}">
                     <h3> ${data.genres[i].name} </h3> </a>
 
                 </article>`

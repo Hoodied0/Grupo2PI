@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/search-results.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/uikit.min.css" /> 
     <link href="https://fonts.googleapis.com/css2?family=Balthazar&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body class="hidden">
@@ -31,6 +32,7 @@
             <li> <a class= "inicio" href="./favorite.html">FAVORITOS</a></li>
 
             <li class="Resultado"> 
+        <!--Query string enviando datos por formularios -->>
          <form class="formulario" action="./search-results.html" method="GET"> 
                 <button type="submit"> <i class="fa-solid fa-magnifying-glass"><a href="./search-results.html"></a>  </i>
                 
@@ -65,7 +67,7 @@
 
         <article class="resultado-busqueda class=uk-animation-fade"> 
             
-            <h2>No se han encontrado resultado para tu busqueda</h2>
+            <h2 >No se han encontrado resultado para tu busqueda</h2>
             
         </article>
 
@@ -83,6 +85,8 @@
  <script src="./js/headeryfooter.js"></script>
  <script src="./js/search-results.js"></script> 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
+<script src="./js/uikit-icons.min.js"></script>
+
 
 </body>
 

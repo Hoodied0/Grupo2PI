@@ -39,12 +39,14 @@ let tituloBusqueda=document.querySelector(".titulobusqueda")
 let movie =location.search
 let movies = " "
 console.log(location)
-let objMovie = new URLSearchParams(movie)
+
+let objMovie = new URLSearchParams(movie) 
 let keyword = objMovie.get('name')
 let series = ' '
 let container2 = document.querySelector(".section_ser")
 
 tituloBusqueda.innerText=`Tu resultado de busqueda es : ${keyword}`
+
 // loading
     window.onload=function(){
     alert ("he cargado completamente tu pagina")
@@ -52,6 +54,8 @@ tituloBusqueda.innerText=`Tu resultado de busqueda es : ${keyword}`
 // removemos la propiedad que evita scrollear una vez que me cargo
     $("body").removeClass("hidden");    
       } 
+
+
  fetch(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${keyword}`)
     .then(function(resp){
     return resp.json()
