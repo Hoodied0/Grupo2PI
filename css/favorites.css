@@ -46,12 +46,6 @@ body{
     flex-wrap: wrap;
  }
 
- h4{
-    color: rgb(175, 175, 175);
-    font-size: 25px;
-    font-family: 'Lato', sans-serif;
- }
-
 @media (max-width: 1024px) {
 .favorite{
 
