@@ -93,8 +93,8 @@ function getAllFavsAndPrint1 (arrFavs1){
             containerserie.innerHTML += `
            
                 <article>
-                <a href='./detail-movie.html?id=${data.id}'>
-                    <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                <a href='./detail-serie.html?id=${data.id}'>
+                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
                    
                     <h4>${data.name}</h4>
                     </a>
@@ -121,7 +121,7 @@ function getAllFavsAndPrint2 (arrFavs2){
             
                 <article>
                 <a href='./detail-movie.html?id=${data.id}'>
-                    <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
                     <h4>${data.title}</h4>
                     </a>
                 </article>
