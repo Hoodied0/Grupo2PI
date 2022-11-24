@@ -6,7 +6,6 @@ let boton1 = document.querySelector('.PeliculasMasPopulares')
 localStorage.removeItem('estadoboton1');
 localStorage.removeItem('estadoboton2');
 localStorage.removeItem('estadoboton3');
-localStorage.removeItem('estadoboton5');
 let estadoboton1 = localStorage.getItem('estadoboton1')
 
 if(estadoboton1 === null || estadoboton1 === undefined){
@@ -207,6 +206,7 @@ boton3.addEventListener('click', function (evento){
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -277,3 +277,5 @@ boton5.addEventListener('click', function (evento){
 
 
 
+=======
+>>>>>>> 7fea4d8d89739fa99014697914ae0825184a8022

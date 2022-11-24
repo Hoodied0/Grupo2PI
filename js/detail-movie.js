@@ -24,7 +24,7 @@ let generos = document.querySelector('#generos')
 for (let i = 0; i < data.genres.length; i++){
     Listageneros += 
         
-       `<a  href="./detail-genres.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
+       `<a  href="./detail-genres-movie.html?id=${data.genres[i].id}"> ${data.genres[i].name} </a>`
      
     }
 
@@ -86,8 +86,8 @@ return response.json()
 )
 .then(function(data){
 
-let favoritos = getStorage() 
-let estaMiProducto = favoritos.includes(data.id) 
+let favoritomovie = getStorage() 
+let estaMiProducto = favoritomovie.includes(data.id) 
 
 let textoInicial = ' '
 if(estaMiProducto){
@@ -101,14 +101,14 @@ let btnFavs = document.querySelector('.favoritos')
 
 btnFavs.addEventListener('click', function(e){
     console.log(e)        
-    let favoritos = getStorage()
-    let estaMiProducto = favoritos.includes(data.id)
+    let favoritomovie = getStorage()
+    let estaMiProducto = favoritomovie.includes(data.id)
 
     if(estaMiProducto){
-        removeFavorite(data.id, favoritos)
+        removeFavorite(data.id, favoritomovie)
         e.target.innerText='Agregar a Favoritos'
     } else {
-        addFavorite(data.id, favoritos)
+        addFavorite(data.id, favoritomovie)
         e.target.innerText='Sacar de Favoritos'
     }
 
@@ -117,7 +117,7 @@ btnFavs.addEventListener('click', function(e){
 })
 
 function getStorage(){
-    let storage = localStorage.getItem('favoritos')
+    let storage = localStorage.getItem('favoritomovie')
     if(storage !== null && storage !== undefined){
         return JSON.parse(storage)
     } else {
@@ -128,14 +128,14 @@ function getStorage(){
 function addFavorite(id, storage){
     storage.push(id)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem('favoritos', storageToString)
+    localStorage.setItem('favoritomovie', storageToString)
 }
 
 function removeFavorite(id, storage){
     let position = storage.indexOf(id)
     storage.splice(position, 1)
     let storageToString = JSON.stringify(storage)
-    localStorage.setItem('favoritos', storageToString)
+    localStorage.setItem('favoritomovie', storageToString)
 }
 
 
