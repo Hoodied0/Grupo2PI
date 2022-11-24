@@ -55,9 +55,7 @@ body{
 
 
 @media (max-width: 1024px) {
-.favorite{
 
-}
 .estructura{
     flex-direction: column;
     height:120px;
