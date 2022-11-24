@@ -1,37 +1,37 @@
-let favnumber = document.querySelector('.favoritelist')
-let containerserie = document.querySelector('.favorite-series');
+let favnumberserie = document.querySelector('.favoritelistserie')
+let favnumbermovie = document.querySelector('.favoritelistmovie')
+let containerserie = document.querySelector('.favorite-series')
 let containermovie = document.querySelector('.favorite-movie')
-let id = localStorage.getItem('favoritos')
-let apiKey = "?api_key=282ba42024158eda7c391efcdc7bbf53&language=en-US"
-let url1 ="https://api.themoviedb.org/3/movie/" + id + apiKey
-console.log(url1)
+let idmovie = localStorage.getItem('favoritomovie')
+let idserie = localStorage.getItem('favoritoserie')
+
 
 window.addEventListener('load', function(){
 
     let favser = getFavsStorage1()
     
-    if(favs.length == 0){
-        favnumber.innerHTML = `
+    if(favser.length == 0){
+        favnumberserie.innerHTML = `
         <section>
-            <h2>No tienes favoritos</h2>
+            <h2>No tienes series favoritas</h2>
         </section>
         `
-    } else if(favs.length == 1) {
-        favnumber.innerHTML += `
+    } else if(favser.length == 1) {
+        favnumberserie.innerHTML += `
         <h2>
-            Tienes ${favs.length} favorito
+            Tienes ${favser.length} serie favorita
         </h2>
         
         ` 
         getAllFavsAndPrint1(favser)
 
     } else {
-        favnumber.innerHTML += `
+        favnumberserie.innerHTML += `
         <h2>
-            Tienes ${favs.length} favoritos
+            Tienes ${favser.length} series favoritas
         </h2>
         ` 
-        getAllFavsAndPrint(favs)
+        getAllFavsAndPrint1(favser)
     }
 
 
@@ -61,8 +61,8 @@ window.addEventListener('load', function(){
 
 })
 
-function getFavsStorage(){
-    let storage = localStorage.getItem('favoritos')
+function getFavsStorage1(){
+    let storage = localStorage.getItem('favoritoserie')
 
     if(storage !== null && storage !== undefined){
         return JSON.parse(storage)
@@ -71,6 +71,15 @@ function getFavsStorage(){
     }
 }
 
+function getFavsStorage2(){
+    let storage = localStorage.getItem('favoritomovie')
+
+    if(storage !== null && storage !== undefined){
+        return JSON.parse(storage)
+    } else {
+        return []
+    }
+}
 
 function getAllFavsAndPrint1 (arrFavs1){
     for(let i=0 ; i< arrFavs1.length ; i++){
@@ -82,24 +91,21 @@ function getAllFavsAndPrint1 (arrFavs1){
             
             console.log(data)
             containerserie.innerHTML += `
-           
+            <li>
                 <article>
-                <a href='./detail-serie.html?id=${data.id}'>
-                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
-                   
+                    <img width ="200px" height ="200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                    <a href='./detail-movie.html?id=${data.id}'>
                     <h4>${data.name}</h4>
                     </a>
                 </article>
-          
+            </li>
             `
-            })
-            .catch(function(error){
-                console.log(error)
-            })
-            }
-   
+        })
+        .catch(function(error){
+            console.log(error)
+        })
     }
-
+}
 
 function getAllFavsAndPrint2 (arrFavs2){
     for(let i=0 ; i< arrFavs2.length ; i++){
@@ -113,12 +119,12 @@ function getAllFavsAndPrint2 (arrFavs2){
             containermovie.innerHTML += `
             
                 <article>
-                <a href='./detail-movie.html?id=${data.id}'>
-                    <img width ="200px" height = "200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'>
+                    <img width ="200px" height ="200px" src='https://image.tmdb.org/t/p/w500/${data.poster_path}'
+                    <a href='./detail-movie.html?id=${data.id}'>
                     <h4>${data.title}</h4>
                     </a>
                 </article>
-           
+            
             `
         })
         .catch(function(error){
@@ -126,13 +132,3 @@ function getAllFavsAndPrint2 (arrFavs2){
         })
     }
 }
-
-
-
-
-
-
-
-
-
-
